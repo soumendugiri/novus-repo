@@ -7,41 +7,9 @@
  */
 
 Route::group(['prefix' => '/'], function () {
-	Route::get('/', ['as' => 'homePage', 'uses' => 'WebController@index']);
-	Route::get('/most-popular', ['as' => 'mostPopularPage', 'uses' => 'WebController@most_popular']);
-	Route::get('/tags', ['as' => 'tagsPage', 'uses' => 'WebController@tags']);
-	Route::get('/categories', ['as' => 'categoriesPage', 'uses' => 'WebController@categories']);
-	Route::get('/gallery', ['as' => 'galleryPage', 'uses' => 'WebController@gallery']);
-	Route::get('/get-gallery-image/{id}', ['as' => 'getGalleryRoute', 'uses' => 'WebController@get_gallery_image']);
-	Route::get('/contact-us', ['as' => 'contactUsPage', 'uses' => 'WebController@contact_us']);
-
-	Route::get('/page/{slug}', ['as' => 'pagePage', 'uses' => 'WebController@page'])->where('slug', '[\w\d\-\_]+');
-
-	Route::get('/category/{id}', ['as' => 'categoryPage', 'uses' => 'WebController@category']);
-	Route::get('/tag/{id}', ['as' => 'tagPage', 'uses' => 'WebController@tag']);
-	Route::get('/details/{slug}', ['as' => 'detailsPage', 'uses' => 'WebController@details'])->where('slug', '[\w\d\-\_]+');
-
-	Route::post('/comment/{id}', ['as' => 'commentRoute', 'uses' => 'WebController@comment']);
-	Route::post('/replay-comment/{id}', ['as' => 'replayCommentRoute', 'uses' => 'WebController@replay_comment']);
-
-	Route::post('/search', ['as' => 'searchRoute', 'uses' => 'WebController@search']);
-	Route::post('/subscribe', ['as' => 'subscribeRoute', 'uses' => 'WebController@subscribe']);
-
-	Route::group(['prefix' => 'dashboard', 'middleware' => ['user'], 'as' => 'dashboard.'], function () {
-		Route::get('/', ['as' => 'dashboardPage', 'uses' => 'WebController@dashboard']);
-		Route::get('/change-password', ['as' => 'editPasswordPage', 'uses' => 'WebController@edit_password']);
-		Route::post('/update-password', ['as' => 'updatePasswordPage', 'uses' => 'WebController@update_password']);
-		Route::get('/edit-profile', ['as' => 'editProfilePage', 'uses' => 'WebController@edit_profile']);
-		Route::post('/update-profile/{id}', ['as' => 'updatePprofilePage', 'uses' => 'WebController@update_profile']);
-
-		Route::get('/add-post', ['as' => 'addPostPage', 'middleware' => ['author'], 'uses' => 'WebController@add_post']);
-		Route::post('/store-post', ['as' => 'storePostRoute', 'middleware' => ['author'], 'uses' => 'WebController@store_post']);
-		Route::get('/edit-post/{id}', ['as' => 'editPostPage', 'middleware' => ['author'], 'uses' => 'WebController@edit_post']);
-		Route::get('/view-post/{slug}', ['as' => 'viewPostPage', 'middleware' => ['author'], 'uses' => 'WebController@view_post']);
-		Route::post('/update-post/{id}', ['as' => 'updatePostRoute', 'middleware' => ['author'], 'uses' => 'WebController@update_post']);
+	Route::get('/', function(){
+		return view('web.index.html');
 	});
-
-	Route::get('/author-profile/{username}', ['as' => 'authorProfilePage', 'uses' => 'WebController@author_profile']);
 });
 
 /*
