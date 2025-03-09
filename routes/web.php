@@ -13,7 +13,17 @@ Route::group(['prefix' => '/'], function () {
 	
 	Route::get('/about-us', function(){
 		return view('web.about');
-	})->name('web.about-us');;
+	})->name('web.about-us');
+});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+ */
+
+ Route::group(['prefix' => '/'], function () {
+	Route::get('/', ['as' => 'homePage', 'uses' => 'WebController@index']);
+	
 });
 
 /*
