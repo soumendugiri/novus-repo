@@ -3,7 +3,7 @@
 
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{ asset('public/admin/css/parsley.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/admin/css/parsley.css') }}">
 <style type="text/css">
 .tab-pane{
 	margin-top: 30px
@@ -47,7 +47,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"></label>
 								<div class="col-sm-10">
-									<img src="{{ asset('public/web/logo/' . $setting->logo) }}" width="262" class="img-responsive">
+									<img src="{{ asset('/web/logo/' . $setting->logo) }}" width="262" class="img-responsive">
 								</div>
 							</div>
 							<div class="form-group{{ $errors->has('logo') ? ' has-error' : '' }}">
@@ -75,7 +75,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"></label>
 								<div class="col-sm-10">
-									<img src="{{ asset('public/web/favicon/' . $setting->favicon) }}" width="32" class="img-responsive">
+									<img src="{{ asset('/web/favicon/' . $setting->favicon) }}" width="32" class="img-responsive">
 								</div>
 							</div>
 							<div class="form-group{{ $errors->has('favicon') ? ' has-error' : '' }}">
@@ -126,7 +126,7 @@
 							<div class="form-group{{ $errors->has('copyright') ? ' has-error' : '' }}">
 								<label for="copyright" class="col-sm-2 control-label">Copyright</label>
 								<div class="col-sm-10">
-									<input type="text" name="copyright" class="form-control" id="copyright" value="{{ $setting->copyright }}" placeholder="ex. Copyright 2018 sudriva, All rights reserved." required maxlength="250">
+									<input type="text" name="copyright" class="form-control" id="copyright" value="{{ $setting->copyright }}" placeholder="ex. Copyright {{ date("Y") }} sudriva, All rights reserved." required maxlength="250">
 									@if ($errors->has('copyright'))
 									<span class="help-block">
 										<strong>{{ $errors->first('copyright') }}</strong>
@@ -434,5 +434,5 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="{{ asset('public/admin/js/parsley.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/admin/js/parsley.min.js') }}"></script>
 @endsection

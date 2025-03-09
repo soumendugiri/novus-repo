@@ -145,27 +145,45 @@
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('web/images/01hero.jpg') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ asset('web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('web/images/01hero.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="{{ asset('web/products1/84.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('web/images/02hero.jpg') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ asset('web/products1/53.png') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('web/images/02hero.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                            
+                                                        <img src="{{ asset('web/products1/53.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
                                                     </div>
-                                                </div>                    
+                                                </div>
                                                 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('web/images/03hero.jpg') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ asset('web/products1/62.png') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('web/images/03hero.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                           
+                                                        <img src="{{ asset('web/products1/62.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="snap-slide trigger-item change-header-color">
+                                                    <div class="img-mask">
+                                                        <div class="section-image trigger-item-link">
+                                                            <img src="{{ asset('web/products1/54.png') }}" class="item-image grid__item-img" alt="">
+                                                        </div>                                                
+                                                        <img src="{{ asset('web/products1/54.png') }}" class="grid__item-img grid__item-img--large" alt="">                           
+                                                    </div>
+                                                </div>
+
+                                                <div class="snap-slide trigger-item change-header-color">
+                                                    <div class="img-mask">
+                                                        <div class="section-image trigger-item-link">
+                                                            <img src="{{ asset('web/products1/64.png') }}" class="item-image grid__item-img" alt="">
+                                                        </div>                                                
+                                                        <img src="{{ asset('web/products1/64.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
                                                     </div>
                                                 </div>
                                                 
@@ -192,21 +210,35 @@
                                         
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('web/images/01hero1.jpg') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ asset('web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
                                                     </div>
-                                                    <a class="slide-link" data-type="page-transition" href="project01.html"></a>
+                                                    <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc') }}"></a>
                                                 </div>
                                                 
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('web/images/02hero1.jpg') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ asset('web/products1/53.png') }}" class="item-image grid__item-img" alt="">
+                                                    </div>
+                                                    <a class="slide-link" data-type="page-transition" href="project02.html"></a>
+                                                </div>
+                                               
+                                                <div class="thumb-slide" data-centerLine="OPEN">
+                                                    <div class="thumb-slide-img">
+                                                        <img src="{{ asset('web/products1/62.png') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project02.html"></a>
                                                 </div>
                                                 
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('web/images/03hero1.jpg') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ asset('web/products1/54.png') }}" class="item-image grid__item-img" alt="">
+                                                    </div>
+                                                    <a class="slide-link" data-type="page-transition" href="project03.html"></a>
+                                                </div>
+
+                                                <div class="thumb-slide" data-centerLine="OPEN">
+                                                    <div class="thumb-slide-img">
+                                                        <img src="{{ asset('web/products1/64.png') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project03.html"></a>
                                                 </div>
@@ -221,15 +253,14 @@
                                             </div>                                                    
                                         </div>
                                         
-                                        
-                                        <div class="snap-slider-captions">                                                
+                                        <div class="snap-slider-captions">                                                            
                                             <div class="snap-slider-captions-wrapper content-full-width">
                                         
                                                 <div class="snap-slide-caption">
-                                                    <div class="slide-title"><span>Son of a Tailor</span></div>                                                      
+                                                    <div class="slide-title"><span>MINI VAN PALADIN</span></div>                                                      
                                                     <div class="slide-current"><span>01</span></div>
                                                     <div class="slide-counter"><span>04</span></div>
-                                                    <div class="slide-subtitle"><span>Brand Identity</span></div>
+                                                    <div class="slide-subtitle"><span>The Mini Van Paladin: The newest and smallest addition to our range of self-sufficient mobile laboratories</span></div>
                                                 </div>
                                                 
                                                 <div class="snap-slide-caption">
