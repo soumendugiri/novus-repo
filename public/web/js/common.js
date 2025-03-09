@@ -1603,6 +1603,226 @@ Function Scroll Effects
 			});
 			
 		}
+
+		if( $('.pinned-lists2').length > 0 ){
+			
+			const wrappers = document.querySelectorAll('.pinned-lists-wrapper');
+
+			wrappers.forEach(wrapper => {
+				const listWrapper = wrapper.querySelector(".pinned-lists2");
+				const lists = wrapper.querySelectorAll(".pinned-lists2 li");
+				const winHeight = window.innerHeight;
+				const durationFactor = parseFloat(wrapper.getAttribute('data-duration'));
+				const durationHeight = winHeight / lists.length;
+				
+				const tl = gsap.timeline({ paused: true });
+				
+				if (wrapper.classList.contains('brick-mode')) {
+				
+					lists.forEach((list, index) => {
+						if (index !== 0) {
+							gsap.set(list, {
+								y: winHeight,
+							});
+							tl.to(list, {
+								y: 0,
+								duration: durationHeight,
+								ease: Quint.easeOut
+							});
+						}
+						
+					});
+				
+				} else if (wrapper.classList.contains('zipper-mode')) {
+					
+					lists.forEach((list, index) => {
+						if (index !== 0) {
+							gsap.set(list, {
+								 x: index % 2 === 0 ? -100 : 100,
+								opacity:0,
+							});
+							tl.to(list, {
+								x: 0,
+								opacity:1,
+								duration: durationHeight,
+								ease: "back.out(2)",
+							});
+						}
+						
+					});
+					
+				} else if (wrapper.classList.contains('left-right-mode')) {	
+					
+					lists.forEach((list, index) => {						
+						gsap.set(list, {
+							x: 0,								
+						});
+						tl.to(list, {
+							x: listWrapper.offsetWidth - list.offsetWidth,								
+							duration: durationHeight,
+							ease: Quint.easeOut
+						});						
+					});
+					
+				}  else if (wrapper.classList.contains('right-left-mode')) {
+					
+					lists.forEach((list, index) => {						
+						gsap.set(list, {
+							x: listWrapper.offsetWidth - list.offsetWidth,								
+						});
+						tl.to(list, {
+							x: 0,								
+							duration: durationHeight,							
+						});						
+					});
+					
+				} else if (wrapper.classList.contains('scale-mode')) {					
+					
+					lists.forEach((list, index) => {						
+						gsap.set(list, {
+							scale:0.7,								
+							opacity:0,
+						});
+						tl.to(list, {
+							scale:1,								
+							opacity:1,
+							ease: "back.out(2)",
+							duration: durationHeight
+						});						
+					});
+					
+				} else if (wrapper.classList.contains('opacity-mode')) {					
+					
+					lists.forEach((list, index) => {						
+						gsap.set(list, {								
+							opacity:0.2,
+						});
+						tl.to(list, {								
+							opacity:1,
+							duration: durationHeight
+						});						
+					});
+					
+				}  else if (wrapper.classList.contains('font-mode')) {
+					
+					let infoIndex = 0;
+					
+					lists.forEach((list, index) => {
+						if (index === 0) {
+							// Primul element are clasa 'secondary-font' și opacitatea 1
+							gsap.set(list, {
+								className: 'secondary-font',
+								opacity: 1
+							});
+						} else {
+							// Restul elementelor au opacitatea 0.2
+							gsap.set(list, {
+								opacity: 0.3
+							});
+						}
+						
+						if (list.hasAttribute('data-infoTextAfter')) {
+							// Alternăm clasele în funcție de indexul curent
+							if (infoIndex % 2 === 0) {
+								list.classList.add('has-info-even');
+							} else {
+								list.classList.add('has-info-odd');
+							}
+							infoIndex++; // Incrementăm contorul doar pentru elementele cu data-infoTextAfter
+						}
+						
+					});
+					
+					// Creează timeline-ul pentru mutarea clasei .secondary-font și modificarea opacității
+					lists.forEach((list, index) => {
+						if (index !== 0) {
+							// La fiecare pas, mutăm clasa de la elementul anterior și setăm opacitatea corespunzătoare
+							tl.to(lists[index - 1], {
+								onComplete: () => {
+									// Îndepărtează clasa de la elementul anterior
+									lists[index - 1].classList.remove('secondary-font');
+									// Setează opacitatea la 1 pentru elementul anterior
+									lists[index - 1].style.opacity = 1;
+								},
+								duration: durationHeight
+							}).to(list, {
+								onStart: () => {
+									// Adaugă clasa la elementul curent
+									list.classList.add('secondary-font');
+									// Setează opacitatea la 1 pentru elementul curent
+									list.style.opacity = 1;
+								},
+								onReverseComplete: () => {
+									// La scroll înapoi, mutăm clasa și opacitatea
+									if (index > 0) {
+										lists[index].classList.remove('secondary-font');
+										lists[index - 1].classList.add('secondary-font');
+										// Setează opacitatea la 1 pentru elementul anterior
+										lists[index - 1].style.opacity = 1;
+										// Setează opacitatea la 0.2 pentru elementul curent
+										lists[index].style.opacity = 0.3;
+									}
+								},
+								duration: durationHeight
+							});
+						}
+					});
+
+				}
+			
+				gsap.to(wrapper, {
+					scrollTrigger: {
+						trigger: wrapper,
+						start: function () {
+							let startPin;
+							if (listWrapper.offsetHeight < winHeight) {
+								startPin = (winHeight - listWrapper.offsetHeight) / 2;
+							} else {
+								startPin = listWrapper.offsetTop + 100;
+							}
+							return "top +=" + startPin;
+						},
+						end: function () {
+							return "+=" + winHeight * durationFactor;
+						},
+						pin: true,
+						scrub: true,
+						onEnter: function () {
+							wrapper.classList.add('visible');
+						},
+						onEnterBack: function () {					
+							wrapper.classList.add('visible');
+						},
+						onLeave: function () {
+							wrapper.classList.remove('visible');
+						},
+						onLeaveBack: function () {					
+							wrapper.classList.remove('visible');
+						},
+						onUpdate: (self) => {
+							tl.progress(self.progress);
+						}
+					}
+				});
+				
+				if (listWrapper.offsetHeight > winHeight) {
+					gsap.to(listWrapper, {
+						scrollTrigger: {
+							trigger: listWrapper,
+							start: "top top",
+							end: function () {
+								return "+=" + winHeight * durationFactor;
+							},						
+							scrub: true,
+						},			
+						
+						y: - (listWrapper.offsetHeight - winHeight + listWrapper.lastElementChild.offsetHeight)
+					});
+				}
+				
+			});
+			
+		}
 		
 		
 		//Parallax Image List Rotator

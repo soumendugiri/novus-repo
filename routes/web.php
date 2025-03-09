@@ -8,8 +8,12 @@
 
 Route::group(['prefix' => '/'], function () {
 	Route::get('/', function(){
-		return view('web.index.html');
-	});
+		return view('web.index');
+	})->name('web.home');
+	
+	Route::get('/about-us', function(){
+		return view('web.about');
+	})->name('web.about-us');;
 });
 
 /*

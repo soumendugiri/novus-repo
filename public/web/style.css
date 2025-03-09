@@ -38,7 +38,7 @@ Primary use:	Showcase Portfolio
 		height:100%;
 		width:100%;
 		color:#777;
-		background-color:#000;
+		background-color:#000000;
 		letter-spacing:-0.15px;
 		user-select: none; /* supported by Chrome and Opera */
 		-webkit-user-select: none; /* Safari */
@@ -710,7 +710,15 @@ Primary use:	Showcase Portfolio
 
 	.one_third {
 		width: 30.6%!important;
-	}	
+	}
+
+	.social-icons {
+		float: left!important;
+		margin-bottom: 1px!important;
+		margin-right: 4%!important;
+		position: relative!important;
+		width: 13%!important;
+	}
 
 	.one_fourth {
 		width: 22%!important;
