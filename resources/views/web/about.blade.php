@@ -16,7 +16,7 @@
                         <div class="inner">
                         
                             <h1 class="hero-title caption-timeline" data-infoTextBefore="Creative" data-infoTextAfter="Agency">
-                                <div><span>studio</span></div>
+                                <div><span>NOVUS</span></div>
                             </h1>
                             
                             <div class="hero-subtitle caption-timeline onload-shuffle">
