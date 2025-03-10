@@ -26,7 +26,7 @@
       <!-- frontend -->
       <li class="user user-menu">
         <a href="{{ route('homePage') }}" target="_blank">
-          <img src="{{ asset('admin/image/frontend.png') }}" class="user-image img-responsive" alt="Frontend" width="25px">
+          <img src="{{ asset('public/admin/image/frontend.png') }}" class="user-image img-responsive" alt="Frontend" width="25px">
           <span class="hidden-xs">Frontend</span>
         </a>
       </li>

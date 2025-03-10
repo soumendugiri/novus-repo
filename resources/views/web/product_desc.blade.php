@@ -41,7 +41,7 @@
                     </div>
                     <div id="hero-image-wrapper" class="change-header-color hero-pixels-cover parallax-scroll-image">
                     	<div id="hero-background-layer" class="parallax-scroll-image">
-                            <div id="hero-bg-image" style="background-image:url('{{ asset('web/products1/84.jpg') }}')"></div>
+                            <div id="hero-bg-image" style="background-image:url('{{ asset('public/web/products1/84.jpg') }}')"></div>
                         </div>
                     </div>                        
                     <!--/Hero Section -->   
@@ -57,7 +57,7 @@
                             <div class="content-row small row_padding_top light-section" data-bgcolor="#c8c8c8">
                                 
                             	<figure>
-                                    <a href="images/projects/son01.jpg" class="image-link"><img src="{{ asset('web/products1/84.jpg') }}" alt="Image Title"></a>               
+                                    <a href="images/projects/son01.jpg" class="image-link"><img src="{{ asset('public/web/products1/84.jpg') }}" alt="Image Title"></a>               
                                     <figcaption>Caption</figcaption>
                                 </figure>       
                                 
@@ -123,10 +123,10 @@
                                 <div class="clapat-slider-wrapper content-slider small-looped-carousel has-animation autocenter light-cursor">
         							<div class="clapat-slider">
                                         <div class="clapat-slider-viewport">
-                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
-                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
-                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
-                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('public/web/products1/84.jpg') }}" alt="Image Title"></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('public/web/products1/84.jpg') }}" alt="Image Title"></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('public/web/products1/84.jpg') }}" alt="Image Title"></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="{{ asset('public/web/products1/84.jpg') }}" alt="Image Title"></div></div>
                                         </div>
                                     </div>
                                     
@@ -166,7 +166,7 @@
                                 
                                 <div class="next-project-image-wrapper">
                                     <div class="next-project-image next-project-image-effects">
-                                        <div class="next-project-image-bg" style="background-image:url('{{ asset('web/products1/84.jpg') }}')"></div>
+                                        <div class="next-project-image-bg" style="background-image:url('{{ asset('public/web/products1/84.jpg') }}')"></div>
                                     </div>            
                                 </div>
                                 
