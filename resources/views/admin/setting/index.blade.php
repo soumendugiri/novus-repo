@@ -3,7 +3,7 @@
 
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{ asset('/admin/css/parsley.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/admin/css/parsley.css') }}">
 <style type="text/css">
 .tab-pane{
 	margin-top: 30px
@@ -434,5 +434,5 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="{{ asset('/admin/js/parsley.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/admin/js/parsley.min.js') }}"></script>
 @endsection
