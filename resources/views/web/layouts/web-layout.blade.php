@@ -9,8 +9,8 @@
     <meta property="og:image" content="" />
     <meta charset="UTF-8" />    
     <link rel="icon" type="image/ico" href="favicon.ico" />
-    <link href="{{ asset('public/web/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/web/css/all.min.css') }}" rel="stylesheet" />
+    <link href="{{ custom_asset('web/style.css') }}" rel="stylesheet" />
+    <link href="{{ custom_asset('web/css/all.min.css') }}" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -90,8 +90,8 @@
                     <!-- Logo -->
                     <div id="clapat-logo" class="hide-ball">
                         <a class="ajax-link" data-type="page-transition" href="index.html">
-                            <img class="black-logo" src="{{ asset('public/web/images/nov-logo.png')}}" alt="ClaPat Logo">
-                            <img class="white-logo" src="{{ asset('public/web/images/nov-logo.png')}}" alt="ClaPat Logo">
+                            <img class="black-logo" src="{{ custom_asset('web/images/nov-logo.png')}}" alt="ClaPat Logo">
+                            <img class="white-logo" src="{{ custom_asset('web/images/nov-logo.png')}}" alt="ClaPat Logo">
                         </a>
                     </div>
                     <!--/Logo -->
@@ -180,21 +180,21 @@
     
     
 		
-    <script src="{{ asset('public/web/js/jquery.min.js')}}"></script>       
-    <script src="{{ asset('public/web/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js') }}"></script>
-	<script src="{{ asset('public/web/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('public/web/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js') }}"></script>    
-    <script src='{{ asset('public/web/cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js') }}'></script>
-	<script src='{{ asset('public/web/cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js') }}'></script>
-	<script src='{{ asset('public/web/cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js') }}'></script>
+    <script src="{{ custom_asset('web/js/jquery.min.js')}}"></script>       
+    <script src="{{ custom_asset('web/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js') }}"></script>
+	<script src="{{ custom_asset('web/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ custom_asset('web/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js') }}"></script>    
+    <script src='{{ custom_asset('web/cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js') }}'></script>
+	<script src='{{ custom_asset('web/cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js') }}'></script>
+	<script src='{{ custom_asset('web/cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js') }}'></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpK1sWi3J3EbUOkF_K4-UHzi285HyFX5M&amp;sensor=false"></script>
     
-    <script src="{{ asset('public/web/js/clapat.js') }}"></script>
-	<script src="{{ asset('public/web/js/plugins.js') }}"></script>
+    <script src="{{ custom_asset('web/js/clapat.js') }}"></script>
+	<script src="{{ custom_asset('web/js/plugins.js') }}"></script>
     
-    <script src="{{ asset('public/web/js/common.js') }}"></script>
-    <script src="{{ asset('public/web/js/contact.js') }}"></script>
-    <script src="{{ asset('public/web/js/scripts.js') }}"></script>
+    <script src="{{ custom_asset('web/js/common.js') }}"></script>
+    <script src="{{ custom_asset('web/js/contact.js') }}"></script>
+    <script src="{{ custom_asset('web/js/scripts.js') }}"></script>
 
     <script>
         // Select floating element

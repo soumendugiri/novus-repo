@@ -95,9 +95,9 @@
 					</div>
 					<div class="widget-user-image">
 						@if(!empty($user->avatar))
-						<img class="img-circle" src="{{ asset('/avatar/' . $user->avatar) }}" alt="{{ $user->name }}">
+						<img class="img-circle" src="{{ custom_asset('/avatar/' . $user->avatar) }}" alt="{{ $user->name }}">
 						@else
-						<img class="img-circle" src="{{ asset('/avatar/user.png') }}" alt="{{ $user->name }}">
+						<img class="img-circle" src="{{ custom_asset('/avatar/user.png') }}" alt="{{ $user->name }}">
 						@endif
 					</div>
 					<div class="box-footer">
@@ -383,8 +383,8 @@
 						method: "GET",
 						dataType: "json",
 						success:function(data){
-							var src = '{{ asset('/avatar') }}/';
-							var default_avatar = '{{ asset('/avatar/user.png') }}';
+							var src = '{{ custom_asset('/avatar') }}/';
+							var default_avatar = '{{ custom_asset('/avatar/user.png') }}';
 							$('#view-modal').modal('show');
 
 							$('#view-name').text(data['name']);
