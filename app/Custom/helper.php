@@ -2,9 +2,9 @@
 
 function get_featured_image_url($var = null) {
 	if ($var != null) {
-		return asset('/featured_image/' . $var . '');
+		return custom_asset('/featured_image/' . $var . '');
 	} else {
-		return asset('/featured_image/');
+		return custom_asset('/featured_image/');
 	}
 }
 
@@ -18,9 +18,9 @@ function get_featured_image_path($var = null) {
 
 function get_featured_image_thumbnail_url($var = null) {
 	if ($var != null) {
-		return asset('/featured_image/thumbnail/' . $var . '');
+		return custom_asset('/featured_image/thumbnail/' . $var . '');
 	} else {
-		return asset('/featured_image/thumbnail/');
+		return custom_asset('/featured_image/thumbnail/');
 	}
 }
 
@@ -34,9 +34,9 @@ function get_featured_image_thumbnail_path($var = null) {
 
 function get_page_featured_image_url($var = null) {
 	if ($var != null) {
-		return asset('/page_featured_image/' . $var . '');
+		return custom_asset('/page_featured_image/' . $var . '');
 	} else {
-		return asset('/page_featured_image/');
+		return custom_asset('/page_featured_image/');
 	}
 }
 
@@ -51,9 +51,9 @@ function get_page_featured_image_path($var = null) {
 
 function get_gallery_image_url($var = null) {
 	if ($var != null) {
-		return asset('/gallery_image/' . $var . '');
+		return custom_asset('/gallery_image/' . $var . '');
 	} else {
-		return asset('/gallery_image/');
+		return custom_asset('/gallery_image/');
 	}
 }
 

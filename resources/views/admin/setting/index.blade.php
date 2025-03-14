@@ -3,7 +3,7 @@
 
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{ asset('public/admin/css/parsley.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ custom_asset('admin/css/parsley.css') }}">
 <style type="text/css">
 .tab-pane{
 	margin-top: 30px
@@ -47,7 +47,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"></label>
 								<div class="col-sm-10">
-									<img src="{{ asset('/web/logo/' . $setting->logo) }}" width="262" class="img-responsive">
+									<img src="{{ custom_asset('/web/logo/' . $setting->logo) }}" width="262" class="img-responsive">
 								</div>
 							</div>
 							<div class="form-group{{ $errors->has('logo') ? ' has-error' : '' }}">
@@ -75,7 +75,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label"></label>
 								<div class="col-sm-10">
-									<img src="{{ asset('/web/favicon/' . $setting->favicon) }}" width="32" class="img-responsive">
+									<img src="{{ custom_asset('/web/favicon/' . $setting->favicon) }}" width="32" class="img-responsive">
 								</div>
 							</div>
 							<div class="form-group{{ $errors->has('favicon') ? ' has-error' : '' }}">
@@ -434,5 +434,5 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="{{ asset('public/admin/js/parsley.min.js') }}"></script>
+<script type="text/javascript" src="{{ custom_asset('admin/js/parsley.min.js') }}"></script>
 @endsection

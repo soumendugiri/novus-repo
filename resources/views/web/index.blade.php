@@ -14,7 +14,7 @@
                     <!-- HTML Structure -->
                     <div id="hero-styles">
                         <video autoplay muted loop id="hero-video" crossorigin="anonymous">
-                            <source src="{{ asset('public/web/images/bg3.mp4') }}" type="video/mp4">
+                            <source src="{{ custom_asset('web/images/bg3.mp4') }}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         
@@ -52,12 +52,12 @@
                 </div>
                 <div id="hero-interaction">
                     <div class="hero-column col-left">
-                        <div class="col-img-wrapper small-img"><img src="{{ asset('public/web/images/01hero1.jpg') }}" alt=""></div>
-                        <div class="col-img-wrapper large-img"><img src="{{ asset('public/web/images/01hero.jpg') }}" alt=""></div>
+                        <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/01hero1.jpg') }}" alt=""></div>
+                        <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/01hero.jpg') }}" alt=""></div>
                     </div>
                     <div class="hero-column col-right">
-                        <div class="col-img-wrapper large-img"><img src="{{ asset('public/web/images/02hero.jpg') }}" alt=""></div>
-                        <div class="col-img-wrapper small-img"><img src="{{ asset('public/web/images/02hero1.jpg') }}" alt=""></div>
+                        <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/02hero.jpg') }}" alt=""></div>
+                        <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/02hero1.jpg') }}" alt=""></div>
                     </div>
                 </div>
             </div>                      
@@ -110,7 +110,7 @@
                                     <div class="landing-video content-timeline">
                                         <div class="content-video-wrapper">
                                             <video loop muted playsinline class="bgvid">
-                                                <source src="{{ asset('public/web/images/nov-intro.mp4') }}" type="video/mp4">
+                                                <source src="{{ custom_asset('web/images/nov-intro.mp4') }}" type="video/mp4">
                                             </video>
                                         </div>
                                     </div>
@@ -145,59 +145,59 @@
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('public/web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ custom_asset('web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('public/web/products1/84.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="{{ custom_asset('web/products1/84.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('public/web/products1/53.png') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ custom_asset('web/products1/53.png') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('public/web/products1/53.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
+                                                        <img src="{{ custom_asset('web/products1/53.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('public/web/products1/62.png') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ custom_asset('web/products1/62.png') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('public/web/products1/62.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
+                                                        <img src="{{ custom_asset('web/products1/62.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('public/web/products1/54.png') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ custom_asset('web/products1/54.png') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('public/web/products1/54.png') }}" class="grid__item-img grid__item-img--large" alt="">                           
+                                                        <img src="{{ custom_asset('web/products1/54.png') }}" class="grid__item-img grid__item-img--large" alt="">                           
                                                     </div>
                                                 </div>
 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('public/web/products1/64.png') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ custom_asset('web/products1/64.png') }}" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="{{ asset('public/web/products1/64.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
+                                                        <img src="{{ custom_asset('web/products1/64.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="snap-slide trigger-item change-header-color">
                                                     <div class="img-mask">
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="{{ asset('public/web/images/04hero.jpg') }}" class="item-image grid__item-img" alt="">
+                                                            <img src="{{ custom_asset('web/images/04hero.jpg') }}" class="item-image grid__item-img" alt="">
                                                             <div class="hero-video-wrapper">
                                                                 <video loop muted class="bgvid">
-                                                                    <source src="{{ asset('public/web/images/04hero.mp4') }}" type="video/mp4">
+                                                                    <source src="{{ custom_asset('web/images/04hero.mp4') }}" type="video/mp4">
                                                                 </video>
                                                             </div>
                                                         </div>                                                
-                                                        <img src="{{ asset('public/web/images/04hero.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                            
+                                                        <img src="{{ custom_asset('web/images/04hero.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                            
                                                     </div>
                                                 </div>
                                             
@@ -210,42 +210,42 @@
                                         
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('public/web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ custom_asset('web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc') }}"></a>
                                                 </div>
                                                 
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('public/web/products1/53.png') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ custom_asset('web/products1/53.png') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project02.html"></a>
                                                 </div>
                                                
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('public/web/products1/62.png') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ custom_asset('web/products1/62.png') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project02.html"></a>
                                                 </div>
                                                 
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('public/web/products1/54.png') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ custom_asset('web/products1/54.png') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project03.html"></a>
                                                 </div>
 
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('public/web/products1/64.png') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ custom_asset('web/products1/64.png') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project03.html"></a>
                                                 </div>
                                                 
                                                 <div class="thumb-slide" data-centerLine="OPEN">
                                                     <div class="thumb-slide-img">
-                                                        <img src="{{ asset('public/web/images/04hero.jpg') }}" class="item-image grid__item-img" alt="">
+                                                        <img src="{{ custom_asset('web/images/04hero.jpg') }}" class="item-image grid__item-img" alt="">
                                                     </div>
                                                     <a class="slide-link" data-type="page-transition" href="project04.html"></a>
                                                 </div>
