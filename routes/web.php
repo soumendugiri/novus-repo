@@ -52,6 +52,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin'], 'as' => 'a
 	Route::get('/tags/published/{id}', ['as' => 'publishedTagsRoute', 'uses' => 'TagController@published']);
 	Route::get('/tags/unpublished/{id}', ['as' => 'unpublishedTagsRoute', 'uses' => 'TagController@unpublished']);
 
+	/*** For Product ***/
+	Route::resource('products', 'ProductController');
+	Route::get('/get-products', ['as' => 'getProductsRoute', 'uses' => 'ProductController@get']);
+	Route::get('/products/published/{id}', ['as' => 'publishedProductsRoute', 'uses' => 'ProductController@published']);
+	Route::get('/products/unpublished/{id}', ['as' => 'unpublishedProductsRoute', 'uses' => 'ProductController@unpublished']);
+
 	/*** For Post ***/
 	Route::resource('posts', 'PostController');
 	Route::get('/get-posts', ['as' => 'getPostsRoute', 'uses' => 'PostController@get']);

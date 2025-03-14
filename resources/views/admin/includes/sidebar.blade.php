@@ -21,6 +21,7 @@
         <li><a href="{{ route('admin.dashboardRoute') }}"><i class="fa fa-home text-purple"></i> <span>Dashboard</span></a></li>
         <li><a href="{{ route('admin.categories.index') }}"><i class="fa fa-paper-plane text-purple"></i> <span>Category</span></a></li>
         <li><a href="{{ route('admin.tags.index') }}"><i class="fa fa-tag text-purple"></i> <span>Tag</span></a></li>
+        <li><a href="{{ route('admin.products.index') }}"><i class="fa fa-envelope-o text-purple"></i> <span>Product</span></a></li>
         <li><a href="{{ route('admin.posts.index') }}"><i class="fa fa-newspaper-o text-purple"></i> <span>Post</span></a></li>
         <li><a href="{{ route('admin.users.index') }}"><i class="fa fa-users text-purple"></i> <span>User</span></a></li>
         <li><a href="{{ route('admin.comments.index') }}"><i class="fa fa-comment text-purple"></i> <span>Comment</span></a></li>
