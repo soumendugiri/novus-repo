@@ -332,9 +332,9 @@
                             
                             <!-- Row -->
                             <div class="content-row row_padding_top light-section text-align-center" data-bgcolor="#c8c8c8">                                   	
-                                
-                                
-                                <div class="social-icons has-animation" data-delay="100">
+                                        
+                                        
+                                <div class="one_third has-animation" data-delay="100">
                                     
                                     <div class="box-icon-wrapper block-boxes">
                                         <div class="box-icon">
@@ -345,42 +345,16 @@
                                             <p>Address</p>
                                         </div>
                                     </div> 
+                                                           
+                                </div>
+                                
+                                <div class="one_third has-animation"  data-delay="200">
+                                    
+                                    <hr><p class="bigger">. . .</p>
                                                             
                                 </div>
                                 
-                                <div class="social-icons has-animation"  data-delay="200">
-                                    
-                                    <div class="box-icon">
-                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                    </div>
-                                                            
-                                </div>
-
-                                <div class="social-icons has-animation"  data-delay="200">
-                                    
-                                    <div class="box-icon">
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    </div>
-                                                            
-                                </div>
-
-                                <div class="social-icons has-animation"  data-delay="200">
-                                    
-                                    <div class="box-icon">
-                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                    </div>
-                                                            
-                                </div>
-
-                                <div class="social-icons has-animation"  data-delay="200">
-                                    
-                                    <div class="box-icon">
-                                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                                    </div>
-                                                            
-                                </div>
-                                
-                                <div class=" social-icons last has-animation"  data-delay="300">
+                                <div class=" one_third last has-animation"  data-delay="300">
                                     
                                     <div class="box-icon-wrapper block-boxes">
                                         <div class="box-icon">
@@ -393,7 +367,7 @@
                                     </div>
                                     
                                 </div> 
-                                                        
+                                                       
                             </div> 
                             <!--/Row -->
                             
@@ -435,53 +409,5 @@
         
         </div>
         <!--/Main -->
-        
-        
-        
-        
-        <!-- Footer -->
-        <footer class="clapat-footer hidden">        	
-            <div id="footer-container">
-                
-                <div id="backtotop" class="button-wrap left">
-                    <div class="icon-wrap parallax-wrap">
-                        <div class="button-icon parallax-element">
-                            <i class="fa-solid fa-angle-up"></i>
-                        </div>
-                    </div>
-                    <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
-                </div>
-                
-                <div class="footer-middle">
-                    <div class="copyright">2025 © <a class="link" target="_blank" href="https://www.clapat.com/">Sudriva</a>. All rights reserved.</div>
-                </div>
-                
-                <div class="socials-wrap">            	
-                    <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                    <div class="socials-text">Follow Us</div>
-                    <ul class="socials">
-                        <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.dribbble.com/clapat" target="_blank">Db</a></span></li>
-                        <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/clapatdesign" target="_blank">Tx</a></span></li>
-                        <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.behance.com/clapat" target="_blank">Be</a></span></li>
-                        <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/clapat.ro" target="_blank">Fb</a></span></li>
-                        <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/clapat.themes/">In</a></span></li>
-                    </ul>                
-                </div>
-                
-            </div>
-        </footer>
-                <!--/Footer -->            
-        	
-        	</div>
-            <!--/Content Scroll -->
-            
-            
-            <div id="app"></div>
-            
-            
-		</div>    
-        <!--/Page Content -->
     
-		</div>
-	</main>
 @endsection

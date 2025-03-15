@@ -69,11 +69,11 @@
                                     <ul class="parallax-content">
                                         <li class="parallax-list">
                                             <div><span>We are Novus</span></div>
-                                            <div><span> Digital forensics company</span></div>
+                                            <div><span>Digital forensics company</span></div>
                                         </li>
                                         <li class="parallax-list">
                                             <div><span>We bring ideas to life</span></div>
-                                            <div><span>We Are best</span></div>
+                                            <div><span>Some more text</span></div>
                                         </li>
                                         <li class="parallax-list">
                                             <div><span>Design with purpose</span></div>
@@ -88,7 +88,7 @@
                             <!--/Row -->
                             
                             
-                            <!-- Row -->
+                            {{-- <!-- Row -->
                             <div class="content-row full row_padding_top row_padding_bottom light-section" data-bgcolor="#c8c8c8">
                                 
                                 <div class="team-list-wrapper">
@@ -170,7 +170,7 @@
                                 </div>                                        
                                 
                             </div> 
-                            <!--/Row -->
+                            <!--/Row --> --}}
                             
                             
                             <!-- Row -->
@@ -194,53 +194,26 @@
                             <!-- Row -->
                             <div class="content-row row_padding_top text-align-center light-section" data-bgcolor="#c8c8c8">
                                 
-                                <p class="bigger has-shuffle secondary-font">Recognition</p>
-                                <h2 class="has-animation">Awards Received</h2>
+                                <p class="bigger has-shuffle secondary-font">Some text</p>
+                                <h2 class="has-animation">Our Collaborators</h2>
                                                                     
                                 <hr>
                                 
                                 <!-- Flex Lists --> 
-                                <ul class="flex-lists-wrapper">                                                            
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">Awwwards</span>
-                                        <span class="flex-list-center">Developer Award, Site of the Day, Honorable Mention</span>
-                                        <span class="flex-list-right">x08 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">CSS Design Awards</span>
-                                        <span class="flex-list-center">Website of the Day, Special Kudos</span>
-                                        <span class="flex-list-right">x06 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">Behance</span>
-                                        <span class="flex-list-center">Featured UX/UI and XD Design</span>
-                                        <span class="flex-list-right">x04 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">CSS Light</span>
-                                        <span class="flex-list-center">Featured Website, Featured Design</span>
-                                        <span class="flex-list-right">x12 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">FWA Awards</span>
-                                        <span class="flex-list-center">FWA of the day, FWA of the month</span>
-                                        <span class="flex-list-right">x04 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">One Page Love</span>
-                                        <span class="flex-list-center">Site of the Day</span>
-                                        <span class="flex-list-right">x10 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">SiteInspire</span>
-                                        <span class="flex-list-center">Featured Website</span>
-                                        <span class="flex-list-right">x08 Awards</span>
-                                    </li>
-                                    <li class="flex-list link has-animation">
-                                        <span class="flex-list-left">CSS Winner</span>
-                                        <span class="flex-list-center">Site of the Day, Special Mention</span>
-                                        <span class="flex-list-right">x12 Awards</span>
-                                    </li>                        
+                                <ul class="flex-lists-wrapper">  
+                                   
+                                    @foreach ($images as $image)
+                                        <li class="flex-list link has-animation">
+                                            <a href="{{ $image['link'] }}" style="text-decoration: none; color: inherit; display: flex; width: 100%;" target="_blank">
+                                                <span class="flex-list-left">
+                                                    <img class="logo-img" src="{{ custom_asset('web/images/collabs/'.$image['name']) }}" alt="{{ $image['name'] }} Logo">
+                                                </span>
+                                                <span class="flex-list-center">{{ $image['main_info'] }}</span>
+                                                <span class="flex-list-right">{{ $image['second_info'] }}</span>
+                                            </a>
+                                        </li>
+                                    @endforeach                                                          
+                                   
                                 </ul>
                                 
                                 <hr class="destroy">
@@ -279,7 +252,7 @@
         
         </div>
         <!--/Main -->
-        
+    
 @endsection
     
    

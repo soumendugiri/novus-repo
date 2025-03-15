@@ -2701,6 +2701,17 @@
 	.flex-list:hover > span {
 		color: #fff;
 	}
+
+	.flex-list > a {
+		z-index: 10;		
+		color: currentColor;
+		-webkit-transition: all 0.2s ease-out 0s;	
+		transition: all 0.2s ease-out 0s;
+	}
+
+	.flex-list:hover a {
+		color: #fff !important;
+	}
 	
 	.flex-list-left {
 		width:15%;
