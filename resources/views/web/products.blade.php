@@ -1,0 +1,168 @@
+@extends('web.layouts.web-layout')
+
+@section('content')         
+<!-- Content Scroll -->
+<div id="content-scroll">
+
+
+    <!-- Main -->
+    <div id="main">
+    
+        <!-- Hero Section -->
+        <div id="hero" class="fixed-hero">
+            <div id="hero-styles">
+                <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center hero-full-caption">
+                    <div class="inner">                                
+                        <h1 class="hero-title caption-timeline onload-shuffle">
+                            <span>Products</span>
+                        </h1>                                                                       
+                    </div>                                
+                </div>                          
+            </div>
+        </div>                      
+        <!--/Hero Section -->
+        
+        
+        <!-- Main Content -->
+        <div id="main-content">
+            <!-- Main Page Content -->
+            <div id="main-page-content">
+                <!-- Fit Thumb Screen Effects -->                                                          
+                <div id="itemsWrapperLinks">                               
+                    <div id="itemsWrapper" class="webgl-fitthumbs fx-one">
+                        
+                        <!-- ClaPat Slider -->
+                        <div id="clapat-webgl-slider" class="clapat-slider-wrapper showcase-gallery preview-mode-enabled">    
+                            
+                            <div id="trigger-slides" class="clapat-slider">
+                                
+                                <!-- ClaPat Main Slider -->
+                                <div class="clapat-slider-viewport">
+                                @foreach ($products as $product)
+                                    <div class="clapat-slide">                                            	
+                                        <div class="slide-effects align-center has-scale-large">                                            
+                                            <div class="slide-inner-height" data-centerLine="VIEW">
+                                                <div class="slide-moving">
+                                                    <div class="trigger-item change-header" data-centerLine="OPEN" data-projectbgcolor="#c8c8c8">
+                                                        <div class="img-mask">
+                                                            <a class="slide-link" data-type="page-transition" href="project01.html"></a>
+                                                            <div class="section-image trigger-item-link">
+                                                                <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
+                                                            </div>                                                
+                                                            <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="grid__item-img grid__item-img--large" alt="">
+                                                        </div>
+                                                    </div>                                                         
+                                                </div>                                                            
+                                            </div>
+                                            <div class="slide-caption">
+                                                <div class="slide-date"><span>{{$product->price}}</span></div>
+                                                <div class="slide-title"><span>{{$product->product_name}}</span></div>
+                                                <div class="slide-cat"><span>{{$product->category->category_name}}</span></div>
+                                            </div>
+                                            <div class="slide-thumb speed-50">
+                                                <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach  
+                                </div>
+                                <!--/ClaPat Main Slider -->
+                                
+                                
+                                <!-- ClaPat Sync Slider -->
+                                <div class="clapat-sync-slider">      
+                                    <div class="clapat-sync-slider-wrapper">
+                                        <div class="clapat-sync-slider-viewport">                                            
+                                        @foreach ($products as $product)
+                                            <div class="clapat-sync-slide">                                                	
+                                                <div class="trigger-item" data-centerLine="OPEN" data-projectbgcolor="#e1dedf" data-projectcolor="#9c505f">
+                                                    <div class="hover-reveal landscape1">
+                                                        <div class="hover-reveal__inner">
+                                                            <div class="hover-reveal__img">
+                                                                <img src="{{get_featured_image_thumbnail_url($product->featured_image)}}" class="item-image grid__item-img" alt="">                                             
+                                                                <img class="grid__item-img grid__item-img--large" src="{{get_featured_image_thumbnail_url($product->featured_image)}}" alt="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <a class="slide-link" data-type="page-transition" href="project01.html"></a>
+                                                    <div class="slide-title trigger-item-link modify-color"><span>{{$product->product_name}}</span></div>
+                                                </div>
+                                            </div>
+                                        @endforeach  
+                                        
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ClaPat Sync Slider -->
+                                
+                                
+                            </div>
+                            <!-- ClaPat Slider --> 
+                            
+                            <div class="slider-zoom-wrapper"></div>                                    
+                            <div class="slider-thumbs-wrapper"></div>
+                            <div class="slider-close-preview"></div>
+                                                                
+                        </div>
+                        <!--/ClaPat Slider Wrapper -->
+                
+                    </div>                                                           
+                </div>    
+                <!-- Fit Thumb Screen Effects -->
+            </div>
+            <!--/Main Page Content -->
+            
+                    
+        </div>
+        <!--/Main Content --> 
+    
+    </div>
+    <!--/Main -->
+    
+    
+    
+    
+    <!-- Footer -->
+    <footer class="clapat-footer hidden">        	
+        <div id="footer-container">
+            
+            <div class="button-icon-link left cp-button-prev fade-slide-element fadeout-element">                        
+                <div class="icon-wrap-scale">
+                    <div class="icon-wrap parallax-wrap">
+                        <div class="button-icon parallax-element">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-text sticky left"><span data-hover="Prev">Prev</span></div>                        
+            </div>
+            
+            <div class="grid-list-option fade-slide-element fadeout-element">
+                <div class="grid-option active link">Grid</div>
+                <div class="list-option link">List</div>
+                <div class="current-option"></div>
+            </div>
+            
+            <div class="button-icon-link right cp-button-next fade-slide-element fadeout-element">                        
+                <div class="icon-wrap-scale">
+                    <div class="icon-wrap parallax-wrap">
+                        <div class="button-icon parallax-element">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-text sticky right"><span data-hover="Next">Next</span></div>                        
+            </div>
+            
+        </div>
+    </footer>
+    <!--/Footer -->
+
+
+</div>
+<!--/Content Scroll -->
+@endsection
+            
+            

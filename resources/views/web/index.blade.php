@@ -11,16 +11,10 @@
             <!-- Hero Section -->
             <div id="hero">
                 <div id="hero-styles" style="overflow: hidden;">
-                    <!-- HTML Structure -->
-                    <div id="hero-styles">
-                        <video autoplay muted loop id="hero-video" crossorigin="anonymous">
-                            <source src="{{ custom_asset('web/images/bg3.mp4') }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        
-                        <!-- Floating Element for Hover Effect -->
-                        <div class="floating-effect" id="floating-effect"></div>
-                    </div>
+                    <video autoplay muted loop id="hero-video" style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translateX(-50%) translateY(-50%);">
+                        <source src="{{ custom_asset('web/images/bg3.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center hero-full-caption">
                         <div class="inner">
                         
@@ -52,15 +46,15 @@
                 </div>
                 <div id="hero-interaction">
                     <div class="hero-column col-left">
-                        <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/01hero1.jpg') }}" alt=""></div>
-                        <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/01hero.jpg') }}" alt=""></div>
+                        <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/01hero1.jpg')}}" alt=""></div>
+                        <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/01hero.jpg')}}" alt=""></div>
                     </div>
                     <div class="hero-column col-right">
-                        <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/02hero.jpg') }}" alt=""></div>
-                        <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/02hero1.jpg') }}" alt=""></div>
+                        <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/02hero.jpg')}}" alt=""></div>
+                        <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/02hero1.jpg')}}" alt=""></div>
                     </div>
                 </div>
-            </div>                      
+            </div>                     
             <!--/Hero Section -->
             
             

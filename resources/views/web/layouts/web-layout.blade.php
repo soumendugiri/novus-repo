@@ -74,7 +74,7 @@
         <!--/Preloader -->     
         
         <div class="cd-index cd-main-content">
-    
+        
         <!-- Page Content -->
         <div id="clapat-page-content" class="dark-content" data-bgcolor="#c8c8c8">
             
@@ -111,13 +111,8 @@
                                     </ul>
                                 </li>
                                 <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="what we do">what we do</span></div></a></li>
-                                <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Projects">Products</span></div></a>
-                                    <ul>
-                                        <li><a class="ajax-link" href="index-highlights.html" data-type="page-transition">Highlights</a></li>
-                                        <li><a class="ajax-link" href="index-portfolio.html" data-type="page-transition">Portfolio</a></li>
-                                        <li><a class="ajax-link" href="index-playground.html" data-type="page-transition">Playground</a></li>
-                                    </ul>
-                                </li>
+                                <li class="menu-timeline link"><a class="{{ Request::is('products') ? 'active' : '' }}" data-type="page-transition" href="{{ route('allProductsRoute') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>
+                                
                                 <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="from our experts">From our experts</span></div></a></li>
                                 <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Email login">Email login</span></div></a></li>
                                 <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="Agency">About</span></div></a></li>
@@ -195,28 +190,6 @@
     <script src="{{ custom_asset('web/js/common.js') }}"></script>
     <script src="{{ custom_asset('web/js/contact.js') }}"></script>
     <script src="{{ custom_asset('web/js/scripts.js') }}"></script>
-
-    <script>
-        // Select floating element
-        const floatingEffect = document.getElementById("floating-effect");
-        
-        // Detect mouse movement
-        document.getElementById("hero-styles").addEventListener("mousemove", (event) => {
-            const x = event.clientX;
-            const y = event.clientY;
-        
-            // Apply translate3d effect
-            floatingEffect.style.transform = `translate3d(${x}px, ${y}px, 0px) scale(1.2)`;
-            floatingEffect.style.opacity = "1";
-            floatingEffect.style.visibility = "visible";
-        });
-        
-        // Hide effect when mouse leaves
-        document.getElementById("hero-styles").addEventListener("mouseleave", () => {
-            floatingEffect.style.opacity = "0";
-            floatingEffect.style.visibility = "hidden";
-        });
-        </script>
 
 
 </body>
