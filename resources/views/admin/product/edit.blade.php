@@ -4,7 +4,7 @@
 
 @section('style')
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="{{ asset('public/admin/css/bootstrap-datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ custom_asset('admin/css/bootstrap-datepicker.min.css') }}">
 <style type="text/css">
 .modal-body {
     position: relative;
@@ -269,7 +269,7 @@
 
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<script type="text/javascript" src="{{ asset('public/admin/js/bootstrap-datepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ custom_asset('admin/js/bootstrap-datepicker.min.js') }}"></script>
 <script type="text/javascript">
 	$(function () {
 		var date = new Date();

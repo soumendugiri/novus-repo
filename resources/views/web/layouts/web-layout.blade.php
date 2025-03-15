@@ -111,14 +111,8 @@
                                         </ul>
                                     </li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="what we do">what we do</span></div></a></li>
-                                    <li class="menu-timeline link"><a class="{{ Request::is('products') ? 'active' : '' }}" data-type="page-transition" href="{{ route('allProductsRoute') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>                                        <ul>
-                                            <li><a class="ajax-link" href="index-highlights.html" data-type="page-transition">Highlights</a></li>
-                                            <li><a class="ajax-link" href="index-portfolio.html" data-type="page-transition">Portfolio</a></li>
-                                            <li><a class="ajax-link" href="index-playground.html" data-type="page-transition">Playground</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="menu-timeline link"><a class="{{ Request::is('products') ? 'active' : '' }}" data-type="page-transition" href="{{ route('allProductsRoute') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="from our experts">From our experts</span></div></a></li>
-                                    <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Email login">Email login</span></div></a></li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="Agency">About</span></div></a></li>
                                 </ul>
                             </div>          
@@ -160,42 +154,44 @@
                         <!--/Menu Burger -->
                 
                     </div>
-                </header>
+                </header> 
                 <!--/Header -->
-            @yield('content')
-        
-                <!-- Footer -->
-                <footer class="clapat-footer hidden">        	
-                    <div id="footer-container">
-                        
-                        <div id="backtotop" class="button-wrap left">
-                            <div class="icon-wrap parallax-wrap">
-                                <div class="button-icon parallax-element">
-                                    <i class="fa-solid fa-angle-up"></i>
-                                </div>
-                            </div>
-                            <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
-                        </div>
-                        
-                        <div class="footer-middle">
-                            <div class="copyright">2025 © <a class="link" target="_blank" href="https://www.clapat.com/">Sudriva</a>. All rights reserved.</div>
-                        </div>
-                        
-                        <div class="socials-wrap">            	
-                            <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                            <div class="socials-text">Follow Us</div>
-                            <ul class="socials">
-                                <li><span class="parallax-wrap"><a class="parallax-element" href=" https://x.com/novusforensics" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href=" https://www.linkedin.com/company/novusforensics" target="_blank"><i class="fa-brands fa-linkedin"></i></a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/novusforensics" target="_blank"><i class="fa-brands fa-facebook"></i></a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/novusforensics/"><i class="fa-brands fa-instagram"></i></a></span></li>
-                            </ul>                
-                        </div>
-                        
-                    </div>
-                </footer>
-                <!--/Footer -->            
+                <!-- Content Scroll -->
+                <div id="content-scroll">    
+                    @yield('content')
                 
+                    <!-- Footer -->
+                    <footer class="clapat-footer hidden">        	
+                        <div id="footer-container">
+                            
+                            <div id="backtotop" class="button-wrap left">
+                                <div class="icon-wrap parallax-wrap">
+                                    <div class="button-icon parallax-element">
+                                        <i class="fa-solid fa-angle-up"></i>
+                                    </div>
+                                </div>
+                                <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
+                            </div>
+                            
+                            <div class="footer-middle">
+                                <div class="copyright">2025 © <a class="link" target="_blank" href="https://sudriva.com/">Sudriva</a>. All rights reserved.</div>
+                            </div>
+                            
+                            <div class="socials-wrap">            	
+                                <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                                <div class="socials-text">Follow Us</div>
+                                <ul class="socials">
+                                    <li><span class="parallax-wrap"><a class="parallax-element" href=" https://x.com/novusforensics" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></span></li>
+                                    <li><span class="parallax-wrap"><a class="parallax-element" href=" https://www.linkedin.com/company/novusforensics" target="_blank"><i class="fa-brands fa-linkedin"></i></a></span></li>
+                                    <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/novusforensics" target="_blank"><i class="fa-brands fa-facebook"></i></a></span></li>
+                                    <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/novusforensics/" target="_blank"><i class="fa-brands fa-instagram"></i></a></span></li>
+                                </ul>                
+                            </div>
+                            
+                        </div>
+                    </footer>
+                    <!--/Footer -->            
+                            
                 </div>
                 <!--/Content Scroll -->
                 

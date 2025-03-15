@@ -877,8 +877,8 @@ Function Scroll Effects
 			
 				let imageIndex = 0;
 				const images = [
-					'<img class="eyes-icon" src="images/eyes1.png" style="transform:scale(0.75);">',
-					'<img class="eyes-icon" src="images/eyes.png" style="transform:scale(0.75);">' 
+					'<img class="eyes-icon" src="web/images/eyes1.png" style="transform:scale(0.75);">',
+					'<img class="eyes-icon" src="web/images/eyes.png" style="transform:scale(0.75);">' 
 				];
 			
 				function switchImage() {

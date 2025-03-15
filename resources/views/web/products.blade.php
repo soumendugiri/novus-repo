@@ -1,9 +1,6 @@
 @extends('web.layouts.web-layout')
 
 @section('content')         
-<!-- Content Scroll -->
-<div id="content-scroll">
-
 
     <!-- Main -->
     <div id="main">
@@ -45,7 +42,7 @@
                                                 <div class="slide-moving">
                                                     <div class="trigger-item change-header" data-centerLine="OPEN" data-projectbgcolor="#c8c8c8">
                                                         <div class="img-mask">
-                                                            <a class="slide-link" data-type="page-transition" href="project01.html"></a>
+                                                            <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
                                                             <div class="section-image trigger-item-link">
                                                                 <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
                                                             </div>                                                
@@ -85,7 +82,7 @@
                                                         </div>
                                                     </div>
                                                     
-                                                    <a class="slide-link" data-type="page-transition" href="project01.html"></a>
+                                                    <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
                                                     <div class="slide-title trigger-item-link modify-color"><span>{{$product->product_name}}</span></div>
                                                 </div>
                                             </div>
@@ -121,48 +118,6 @@
     </div>
     <!--/Main -->
     
-    
-    
-    
-    <!-- Footer -->
-    <footer class="clapat-footer hidden">        	
-        <div id="footer-container">
-            
-            <div class="button-icon-link left cp-button-prev fade-slide-element fadeout-element">                        
-                <div class="icon-wrap-scale">
-                    <div class="icon-wrap parallax-wrap">
-                        <div class="button-icon parallax-element">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-text sticky left"><span data-hover="Prev">Prev</span></div>                        
-            </div>
-            
-            <div class="grid-list-option fade-slide-element fadeout-element">
-                <div class="grid-option active link">Grid</div>
-                <div class="list-option link">List</div>
-                <div class="current-option"></div>
-            </div>
-            
-            <div class="button-icon-link right cp-button-next fade-slide-element fadeout-element">                        
-                <div class="icon-wrap-scale">
-                    <div class="icon-wrap parallax-wrap">
-                        <div class="button-icon parallax-element">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-text sticky right"><span data-hover="Next">Next</span></div>                        
-            </div>
-            
-        </div>
-    </footer>
-    <!--/Footer -->
-
-
-</div>
-<!--/Content Scroll -->
 @endsection
             
             

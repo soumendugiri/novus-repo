@@ -14,12 +14,11 @@ Route::group(['prefix' => '/'], function () {
 	Route::get('/about-us', function(){
 		return view('web.about');
 	})->name('web.about-us');
-	
-	Route::get('/product_desc', function(){
-		return view('web.product_desc');
-	})->name('web.product_desc');
 
-	Route::get('/products', ['as' => 'allProductsRoute', 'uses' => 'WebController@products']);
+	Route::get('/collaborators', 'Web\WebController@collaborators')->name('web.collaborators');
+	Route::get('/products', ['as' => 'allProductsRoute', 'uses' => 'Web\WebController@products']);
+	Route::get('/product_desc/{pid}', 'Web\WebController@product_desc')->name('web.product_desc');
+
 });
 /*
 |--------------------------------------------------------------------------
