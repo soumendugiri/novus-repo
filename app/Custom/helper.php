@@ -2,9 +2,9 @@
 
 function get_featured_image_url($var = null) {
 	if ($var != null) {
-		return custom_asset('/featured_image/' . $var . '');
+		return custom_asset('featured_image/' . $var);
 	} else {
-		return custom_asset('/featured_image/');
+		return custom_asset('featured_image/');
 	}
 }
 

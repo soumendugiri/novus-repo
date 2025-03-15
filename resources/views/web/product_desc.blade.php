@@ -1,6 +1,6 @@
 @extends('web.layouts.web-layout')
 @section('content')
-    
+
     <!-- Main -->
     <div id="main">
     
@@ -10,10 +10,10 @@
                 <div id="hero-caption" class="content-full-width parallax-scroll-caption">
                     
                     <div class="inner">   
-                        <h1 class="hero-title caption-timeline"><span>MINI</span><span>VAN PALADIN</span></h1>
+                        <h1 class="hero-title caption-timeline"><span>{{ $product['product']->category->category_name }}</span><span>{{ $product['product']->product_name }}</span></h1>
                         <div class="hero-subtitle caption-timeline onload-shuffle">
-                            <div><span>The Mini Van Paladin:</span></div> 
-                            <div class="secondary-font"><span>The newest and smallest addition to our range of self-sufficient mobile laboratories</span></div>
+                            <div><span>{{ $product['product']->product_name }}:</span></div> 
+                            <div class="secondary-font"><span><span>{!! $product['product']->product_details !!}</span></span></div>
                         </div>
                     </div>
                     
@@ -38,7 +38,7 @@
         </div>
         <div id="hero-image-wrapper" class="change-header-color hero-pixels-cover parallax-scroll-image">
             <div id="hero-background-layer" class="parallax-scroll-image">
-                <div id="hero-bg-image" style="background-image:url('{{ custom_asset('web/products1/84.jpg') }}')"></div>
+                <div id="hero-bg-image" style="background-image:url('{{ get_featured_image_thumbnail_url($product['product']->featured_image) }}')"></div>
             </div>
         </div>                        
         <!--/Hero Section -->   
@@ -54,8 +54,8 @@
                 <div class="content-row small row_padding_top light-section" data-bgcolor="#c8c8c8">
                     
                     <figure>
-                        <a href="images/projects/son01.jpg" class="image-link"><img src="{{ custom_asset('web/products1/84.jpg') }}" alt="Image Title"></a>               
-                        <figcaption>Caption</figcaption>
+                        <a href="{{ get_featured_image_thumbnail_url($product['product']->featured_image) }}" class="image-link"><img src="{{ get_featured_image_thumbnail_url($product['product']->featured_image) }}" alt="Image Title"></a>               
+                        <figcaption>Price:{{ $product['product']->price }}</figcaption>
                     </figure>       
                     
                 </div> 
@@ -73,7 +73,7 @@
                         <div class="clapat-button-wrap parallax-wrap hide-ball">
                             <div class="clapat-button parallax-element">
                                 <div class="button-border rounded parallax-element-second">
-                                    <a target="_blank" href="https://www.behance.net/gallery/170397053/Son-of-a-Tailor">
+                                    <a target="_blank" href="#">
                                         <span data-hover="View Project">View Project</span>
                                         </a>
                                 </div>
@@ -120,10 +120,9 @@
                     <div class="clapat-slider-wrapper content-slider small-looped-carousel has-animation autocenter light-cursor">
                         <div class="clapat-slider">
                             <div class="clapat-slider-viewport">
-                                <div class="clapat-slide"><div class="slide-img"><img src="{{ custom_asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
-                                <div class="clapat-slide"><div class="slide-img"><img src="{{ custom_asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
-                                <div class="clapat-slide"><div class="slide-img"><img src="{{ custom_asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
-                                <div class="clapat-slide"><div class="slide-img"><img src="{{ custom_asset('web/products1/84.jpg') }}" alt="Image Title"></div></div>
+                                @foreach ($product['product']->images as $prod_img) 
+                                 <div class="clapat-slide"><div class="slide-img"><img src="{{ get_featured_image_url($prod_img['image']) }}" alt="Image Title"></div></div>
+                                @endforeach
                             </div>
                         </div>
                         
@@ -151,7 +150,7 @@
                     
                     <div id="next-project-caption" class="text-align-center content-full-width">
                         <div class="next-caption-wrapper">
-                            <a class="next-ajax-link-project" data-type="page-transition" href="{{ route('web.product_desc') }}" data-firstline="Next" data-secondline="Project"></a>
+                            <a class="next-ajax-link-project" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product['next_product']->id)]) }}" data-firstline="Next" data-secondline="Project"></a>
                             <div class="next-caption">
                                 <div class="next-hero-title caption-timeline has-shuffle-title" data-firstline="Keep" data-secondline="Scrolling"><span>VAN PALADIN</span></div>
                                 <div class="next-hero-subtitle caption-timeline secondary-font"><span>Keep Scrolling</span></div> 

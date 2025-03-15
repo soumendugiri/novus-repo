@@ -110,7 +110,7 @@ class ProductController extends Controller {
 	}
 
 	public function featured_image($id, $image) {
-		$filename = $id . '.' . $image->getClientOriginalExtension();
+		$filename = $id . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
 		$location = get_featured_image_path($filename);
 		// create new image with transparent background color
 		$background = Image::canvas(688, 387);
@@ -225,12 +225,18 @@ class ProductController extends Controller {
 
 		if ($request->hasFile('featured_image')) {
 			$image = $request->file('featured_image');
-			$file_name = $this->featured_image($product->id, $image);
-			$this->featured_image_thumbnail($product->id, $image);
-			$product->update(['featured_image' => $file_name]);
+			$filename = $this->featured_image_thumbnail($product->id, $image);
+			$product->update(['featured_image' => $filename]);
 		}
 
 		if ($request->hasFile('product_images')) {
+			
+			$productImages = ProductImage::where('product_id', $product->id)->get();
+			foreach ($productImages as $image) {
+				@unlink(get_featured_image_path($image->image));
+				$image->delete();
+			}
+
 			foreach ($request->file('product_images') as $image) {
 				$file_name = $this->featured_image($product->id, $image);
 				ProductImage::create([

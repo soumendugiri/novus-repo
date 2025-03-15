@@ -18,14 +18,22 @@ class WebController extends Controller {
 
 	public function products(){
 
-		$data['products'] = Product::with(['category','images'])->get();
+		$data['products'] = Product::with(['category','images'])->where('publication_status', 1)->get();
 		return view('web.products',$data);
 	}
 
 	public function product_desc($pid){
 		
 		$pid=base64_decode($pid);
-		$product = Product::where('id', $pid)->first();
+		
+		$productData = Product::with(['category','images'])->where('id', $pid)->first();
+		
+		$randomNextProduct = Product::where('id', '!=', $pid)
+			->inRandomOrder()
+			->first();
+		$product['product']=$productData;
+		$product['next_product']=$randomNextProduct;
+		
 		return view('web.product_desc',compact('product'));
 	}
 
