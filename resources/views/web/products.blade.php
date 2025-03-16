@@ -35,33 +35,35 @@
                                 
                                 <!-- ClaPat Main Slider -->
                                 <div class="clapat-slider-viewport">
-                                @foreach ($products as $product)
-                                    <div class="clapat-slide">                                            	
-                                        <div class="slide-effects align-center has-scale-large">                                            
-                                            <div class="slide-inner-height" data-centerLine="VIEW">
-                                                <div class="slide-moving">
-                                                    <div class="trigger-item change-header" data-centerLine="OPEN" data-projectbgcolor="#c8c8c8">
-                                                        <div class="img-mask">
-                                                            <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
-                                                            <div class="section-image trigger-item-link">
-                                                                <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
-                                                            </div>                                                
-                                                            <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="grid__item-img grid__item-img--large" alt="">
-                                                        </div>
-                                                    </div>                                                         
-                                                </div>                                                            
+                                    @if ($products->isNotEmpty())
+                                        @foreach ($products as $product)
+                                            <div class="clapat-slide">                                            	
+                                                <div class="slide-effects align-center has-scale-large">                                            
+                                                    <div class="slide-inner-height" data-centerLine="VIEW">
+                                                        <div class="slide-moving">
+                                                            <div class="trigger-item change-header" data-centerLine="OPEN" data-projectbgcolor="#c8c8c8">
+                                                                <div class="img-mask">
+                                                                    <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
+                                                                    <div class="section-image trigger-item-link">
+                                                                        <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
+                                                                    </div>                                                
+                                                                    <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="grid__item-img grid__item-img--large" alt="">
+                                                                </div>
+                                                            </div>                                                         
+                                                        </div>                                                            
+                                                    </div>
+                                                    <div class="slide-caption">
+                                                        <div class="slide-date"><span>{{$product->price}}</span></div>
+                                                        <div class="slide-title"><span>{{$product->product_name}}</span></div>
+                                                        <div class="slide-cat"><span>{{$product->category->category_name}}</span></div>
+                                                    </div>
+                                                    <div class="slide-thumb speed-50">
+                                                        <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" alt="">
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="slide-caption">
-                                                <div class="slide-date"><span>{{$product->price}}</span></div>
-                                                <div class="slide-title"><span>{{$product->product_name}}</span></div>
-                                                <div class="slide-cat"><span>{{$product->category->category_name}}</span></div>
-                                            </div>
-                                            <div class="slide-thumb speed-50">
-                                                <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach  
+                                        @endforeach  
+                                    @endif
                                 </div>
                                 <!--/ClaPat Main Slider -->
                                 
