@@ -150,7 +150,7 @@
                     
                     <div id="next-project-caption" class="text-align-center content-full-width">
                         <div class="next-caption-wrapper">
-                            <a class="next-ajax-link-project" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product['next_product']->id)]) }}" data-firstline="Next" data-secondline="Project"></a>
+                            <a class="next-ajax-link-project" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product['next_product']->id ?? $product['product']->id)]) }}" data-firstline="Next" data-secondline="Project"></a>
                             <div class="next-caption">
                                 <div class="next-hero-title caption-timeline has-shuffle-title" data-firstline="Keep" data-secondline="Scrolling"><span>{{ $product['product']->product_name }}</span></div>
                                 <div class="next-hero-subtitle caption-timeline secondary-font"><span>Keep Scrolling</span></div> 
