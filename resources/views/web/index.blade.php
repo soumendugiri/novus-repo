@@ -132,148 +132,49 @@
                                 
                                     <div class="snap-slider-images">
                                         <div class="snap-slider-images-wrapper">
-                                    
-                                            <div class="snap-slide trigger-item change-header-color">
-                                                <div class="img-mask">
-                                                    <div class="section-image trigger-item-link">
-                                                        <img src="{{ custom_asset('web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
-                                                    </div>                                                
-                                                    <img src="{{ custom_asset('web/products1/84.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                              
+                                           
+                                            @foreach ($data['products'] as $product)
+                                                <div class="snap-slide trigger-item change-header-color">
+                                                    <div class="img-mask">
+                                                        <div class="section-image trigger-item-link">
+                                                            <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
+                                                        </div>                                                
+                                                        <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="grid__item-img grid__item-img--large" alt="">                              
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            
-                                            <div class="snap-slide trigger-item change-header-color">
-                                                <div class="img-mask">
-                                                    <div class="section-image trigger-item-link">
-                                                        <img src="{{ custom_asset('web/products1/53.png') }}" class="item-image grid__item-img" alt="">
-                                                    </div>                                                
-                                                    <img src="{{ custom_asset('web/products1/53.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="snap-slide trigger-item change-header-color">
-                                                <div class="img-mask">
-                                                    <div class="section-image trigger-item-link">
-                                                        <img src="{{ custom_asset('web/products1/62.png') }}" class="item-image grid__item-img" alt="">
-                                                    </div>                                                
-                                                    <img src="{{ custom_asset('web/products1/62.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="snap-slide trigger-item change-header-color">
-                                                <div class="img-mask">
-                                                    <div class="section-image trigger-item-link">
-                                                        <img src="{{ custom_asset('web/products1/54.png') }}" class="item-image grid__item-img" alt="">
-                                                    </div>                                                
-                                                    <img src="{{ custom_asset('web/products1/54.png') }}" class="grid__item-img grid__item-img--large" alt="">                           
-                                                </div>
-                                            </div>
-
-                                            <div class="snap-slide trigger-item change-header-color">
-                                                <div class="img-mask">
-                                                    <div class="section-image trigger-item-link">
-                                                        <img src="{{ custom_asset('web/products1/64.png') }}" class="item-image grid__item-img" alt="">
-                                                    </div>                                                
-                                                    <img src="{{ custom_asset('web/products1/64.png') }}" class="grid__item-img grid__item-img--large" alt="">                            
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="snap-slide trigger-item change-header-color">
-                                                <div class="img-mask">
-                                                    <div class="section-image trigger-item-link">
-                                                        <img src="{{ custom_asset('web/images/04hero.jpg') }}" class="item-image grid__item-img" alt="">
-                                                        <div class="hero-video-wrapper">
-                                                            <video loop muted class="bgvid">
-                                                                <source src="{{ custom_asset('web/images/04hero.mp4') }}" type="video/mp4">
-                                                            </video>
-                                                        </div>
-                                                    </div>                                                
-                                                    <img src="{{ custom_asset('web/images/04hero.jpg') }}" class="grid__item-img grid__item-img--large" alt="">                            
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         
                                         </div>
                                     </div>
                                     
                                     
                                     <div class="snap-slider-thumbs">                                                
-                                        <div class="snap-slider-thumbs-wrapper">
-                                    
-                                            <div class="thumb-slide" data-centerLine="OPEN">
-                                                <div class="thumb-slide-img">
-                                                    <img src="{{ custom_asset('web/products1/84.jpg') }}" class="item-image grid__item-img" alt="">
+                                        <div class="snap-slider-thumbs-wrapper"> 
+                                            @foreach ($data['products'] as $product)
+                            
+                                                <div class="thumb-slide" data-centerLine="OPEN">
+                                                    <div class="thumb-slide-img">
+                                                        <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
+                                                    </div>
+                                                    <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
                                                 </div>
-                                                <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',1) }}"></a>
-                                            </div>
-                                            
-                                            <div class="thumb-slide" data-centerLine="OPEN">
-                                                <div class="thumb-slide-img">
-                                                    <img src="{{ custom_asset('web/products1/53.png') }}" class="item-image grid__item-img" alt="">
-                                                </div>
-                                                <a class="slide-link" data-type="page-transition" href="project02.html"></a>
-                                            </div>
-                                            
-                                            <div class="thumb-slide" data-centerLine="OPEN">
-                                                <div class="thumb-slide-img">
-                                                    <img src="{{ custom_asset('web/products1/62.png') }}" class="item-image grid__item-img" alt="">
-                                                </div>
-                                                <a class="slide-link" data-type="page-transition" href="project02.html"></a>
-                                            </div>
-                                            
-                                            <div class="thumb-slide" data-centerLine="OPEN">
-                                                <div class="thumb-slide-img">
-                                                    <img src="{{ custom_asset('web/products1/54.png') }}" class="item-image grid__item-img" alt="">
-                                                </div>
-                                                <a class="slide-link" data-type="page-transition" href="project03.html"></a>
-                                            </div>
-
-                                            <div class="thumb-slide" data-centerLine="OPEN">
-                                                <div class="thumb-slide-img">
-                                                    <img src="{{ custom_asset('web/products1/64.png') }}" class="item-image grid__item-img" alt="">
-                                                </div>
-                                                <a class="slide-link" data-type="page-transition" href="project03.html"></a>
-                                            </div>
-                                            
-                                            <div class="thumb-slide" data-centerLine="OPEN">
-                                                <div class="thumb-slide-img">
-                                                    <img src="{{ custom_asset('web/images/04hero.jpg') }}" class="item-image grid__item-img" alt="">
-                                                </div>
-                                                <a class="slide-link" data-type="page-transition" href="project04.html"></a>
-                                            </div>
+                                                
+                                            @endforeach
                                         
                                         </div>                                                    
                                     </div>
                                     
                                     <div class="snap-slider-captions">                                                            
                                         <div class="snap-slider-captions-wrapper content-full-width">
-                                    
-                                            <div class="snap-slide-caption">
-                                                <div class="slide-title"><span>MINI VAN PALADIN</span></div>                                                      
-                                                <div class="slide-current"><span>01</span></div>
-                                                <div class="slide-counter"><span>04</span></div>
-                                                <div class="slide-subtitle"><span>The Mini Van Paladin: The newest and smallest addition to our range of self-sufficient mobile laboratories</span></div>
-                                            </div>
-                                            
-                                            <div class="snap-slide-caption">
-                                                <div class="slide-title"><span>Stena Air</span></div>                                                      
-                                                <div class="slide-current"><span>02</span></div>
-                                                <div class="slide-counter"><span>04</span></div>
-                                                <div class="slide-subtitle"><span>Graphic Design</span></div>
-                                            </div>
-                                            
-                                            <div class="snap-slide-caption change-header1" data-centerLine="OPEN">
-                                                <div class="slide-title"><span>Lounge Chair</span></div>                                                      
-                                                <div class="slide-current"><span>03</span></div>
-                                                <div class="slide-counter"><span>04</span></div>
-                                                <div class="slide-subtitle"><span>Photography</span></div>
-                                            </div>
-                                            
-                                            <div class="snap-slide-caption">
-                                                <div class="slide-title"><span>Invincibles</span></div>                                                      
-                                                <div class="slide-current"><span>04</span></div>
-                                                <div class="slide-counter"><span>04</span></div>
-                                                <div class="slide-subtitle"><span>Video</span></div>
-                                            </div>
+                                           
+                                            @foreach ($data['products'] as $key=>$product)
+                                                <div class="snap-slide-caption">
+                                                    <div class="slide-title"><span>{{ $product->product_name }}</span></div>                                                      
+                                                    <div class="slide-current"><span>{{ $key+1 }}</span></div>
+                                                    <div class="slide-counter"><span>{{ count($data['products']) }}</span></div>
+                                                    <div class="slide-subtitle"><span>{{ $product->category->category_name }}</span></div>
+                                                </div>
+                                            @endforeach
                                         
                                         </div>                                                    
                                     </div>
@@ -391,7 +292,7 @@
                 <div class="page-nav-wrap">
                     <div class="page-nav-caption nav-full-caption content-full-width text-align-center">                                 
                         <div class="inner">
-                            <a class="next-ajax-link-page" data-type="page-transition" data-centerline="GO TO" href="about.html">
+                            <a class="next-ajax-link-page" data-type="page-transition" data-centerline="GO TO" href="{{ route('allProductsRoute') }}">
                                 <div class="next-hero-title caption-timeline" data-infoTextBefore="Go Ahead" data-infoTextAfter="Next Page"><span>Products</span></div>
                             </a>                                  
                         </div>               

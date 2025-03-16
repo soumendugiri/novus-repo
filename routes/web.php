@@ -7,17 +7,19 @@
  */
 
 Route::group(['prefix' => '/'], function () {
-	Route::get('/', function(){
-		return view('web.index');
-	})->name('web.home');
+	// Route::get('/', function(){
+	// 	return view('web.index');
+	// })->name('web.home');
 	
 	Route::get('/about-us', function(){
 		return view('web.about');
 	})->name('web.about-us');
 
+	Route::get('/', 'Web\WebController@index')->name('web.home');
 	Route::get('/collaborators', 'Web\WebController@collaborators')->name('web.collaborators');
 	Route::get('/products', ['as' => 'allProductsRoute', 'uses' => 'Web\WebController@products']);
 	Route::get('/product_desc/{pid}', 'Web\WebController@product_desc')->name('web.product_desc');
+	Route::get('/clients', 'Web\WebController@clients')->name('web.clients');
 
 });
 /*

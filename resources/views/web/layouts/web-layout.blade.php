@@ -76,7 +76,7 @@
         <div class="cd-index cd-main-content">
     
             <!-- Page Content -->
-            <div id="clapat-page-content" class="dark-content" data-bgcolor="#c8c8c8">
+            <div id="clapat-page-content" class="dark-content" data-bgcolor="#c1bbf0">
                 
                 <!-- Header -->
                 <header class="clapat-header classic-menu invert-header" data-menucolor="#0c0c0c">
@@ -89,7 +89,7 @@
                         
                         <!-- Logo -->
                         <div id="clapat-logo" class="hide-ball">
-                            <a class="ajax-link" data-type="page-transition" href="index.html">
+                            <a class="ajax-link" data-type="page-transition" href="{{ route('web.home') }}">
                                 <img class="black-logo" src="{{ custom_asset('web/images/nov-logo.png')}}" alt="ClaPat Logo">
                                 <img class="white-logo" src="{{ custom_asset('web/images/nov-logo.png')}}" alt="ClaPat Logo">
                             </a>
@@ -102,16 +102,16 @@
                             <div class="nav-height">          
                                 <ul data-breakpoint="1025" class="flexnav">
                                     <li class="menu-timeline link"><a class="ajax-link {{ Request::is('/') ? 'active' : '' }}" data-type="page-transition" href="{{ route('web.home') }}"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
-                                    <li class="menu-timeline link"><a class="ajax-link {{ Request::is('about-us') ? 'active' : '' }}" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Who we are">Who we are</span></div></a>
+                                    <li class="menu-timeline link"><a class="ajax-link {{ Request::is(['about-us', 'collaborators','clients']) ? 'active' : '' }}" data-type="page-transition" href="#"><div class="before-span"><span data-hover="Who we are">Who we are</span></div></a>
                                         <ul>
                                             <li><a class="ajax-link" href="{{ route('web.about-us') }}" data-type="page-transition">ABOUT US</a></li>
                                             <li><a class="ajax-link" href="{{ route('web.collaborators') }}" data-type="page-transition">COLLABORATORS</a></li>
-                                            <li><a class="ajax-link" href="index-playground.html" data-type="page-transition">THEY TRUST US</a></li>
+                                            <li><a class="ajax-link" href="{{ route('web.clients') }}" data-type="page-transition">THEY TRUST US</a></li>
                                             <li><a class="ajax-link" href="index-playground.html" data-type="page-transition">OUR TEAM</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="what we do">what we do</span></div></a></li>
-                                    <li class="menu-timeline link"><a class="{{ Request::is('products') ? 'active' : '' }}" data-type="page-transition" href="{{ route('allProductsRoute') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>
+                                    <li class="menu-timeline link"><a class="{{ Request::is(['products','product_desc/*']) ? 'active' : '' }}" data-type="page-transition" href="{{ route('allProductsRoute') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="from our experts">From our experts</span></div></a></li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="about.html"><div class="before-span"><span data-hover="Agency">About</span></div></a></li>
                                 </ul>

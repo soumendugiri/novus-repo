@@ -152,7 +152,7 @@
                         <div class="next-caption-wrapper">
                             <a class="next-ajax-link-project" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product['next_product']->id)]) }}" data-firstline="Next" data-secondline="Project"></a>
                             <div class="next-caption">
-                                <div class="next-hero-title caption-timeline has-shuffle-title" data-firstline="Keep" data-secondline="Scrolling"><span>VAN PALADIN</span></div>
+                                <div class="next-hero-title caption-timeline has-shuffle-title" data-firstline="Keep" data-secondline="Scrolling"><span>{{ $product['product']->product_name }}</span></div>
                                 <div class="next-hero-subtitle caption-timeline secondary-font"><span>Keep Scrolling</span></div> 
                             </div>                            
                         </div>                   
@@ -162,7 +162,7 @@
                     
                     <div class="next-project-image-wrapper">
                         <div class="next-project-image next-project-image-effects">
-                            <div class="next-project-image-bg" style="background-image:url('{{ custom_asset('web/products1/84.jpg') }}')"></div>
+                            <div class="next-project-image-bg" style="background-image:url('{{ get_featured_image_thumbnail_url($product['product']->featured_image) }}')"></div>
                         </div>            
                     </div>
                     
