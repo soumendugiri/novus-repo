@@ -87,8 +87,7 @@ class ProductController extends Controller {
 
 		if ($request->hasFile('featured_image')) {
 			$image = $request->file('featured_image');
-			$file_name = $this->featured_image($product->id, $image);
-			$this->featured_image_thumbnail($product->id, $image);
+			$file_name = $this->featured_image_thumbnail($product->id, $image);
 			$product->update(['featured_image' => $file_name]);
 		}
 
