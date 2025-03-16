@@ -9,7 +9,6 @@ app/storage/
 
 # Laravel 5 & Lumen specific
 public/storage
-public/featured_image
 public/hot
 
 # Laravel 5 & Lumen specific with changed public path
@@ -29,3 +28,4 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+/public/featured_image
