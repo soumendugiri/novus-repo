@@ -10,7 +10,7 @@
                 <div id="hero-caption" class="content-full-width parallax-scroll-caption">
                     
                     <div class="inner">   
-                        <h1 class="hero-title caption-timeline"><span>{{ $product['product']->category->category_name }}</span><span>{{ $product['product']->product_name }}</span></h1>
+                        <h1 class="hero-title caption-timeline"><span>{{ $product['product']->company->company_name }}</span><span>{{ $product['product']->product_name }}</span></h1>
                         <div class="hero-subtitle caption-timeline onload-shuffle">
                             <div><span>{{ $product['product']->product_name }}:</span></div> 
                             <div class="secondary-font"><span><span>{!! $product['product']->product_details !!}</span></span></div>
@@ -51,7 +51,7 @@
             
                 
                 <!-- Row -->
-                <div class="content-row small row_padding_top light-section" data-bgcolor="#c8c8c8">
+                <div class="content-row small row_padding_top light-section" data-bgcolor="#c1bbf0">
                     
                     <figure>
                         <a href="{{ get_featured_image_thumbnail_url($product['product']->featured_image) }}" class="image-link"><img src="{{ get_featured_image_thumbnail_url($product['product']->featured_image) }}" alt="Image Title"></a>               
@@ -63,7 +63,7 @@
                 
                 
                 <!-- Row -->
-                <div class="content-row small row_padding_bottom light-section text-align-center" data-bgcolor="#c8c8c8">
+                <div class="content-row small row_padding_bottom light-section text-align-center" data-bgcolor="#c1bbf0">
                     
                     <hr><hr class="destroy">
                     <p class="has-opacity">These images are credited to the following author.</p>
@@ -86,7 +86,7 @@
                 
                 
                 <!-- Row -->
-                <div class="content-row full light-section disable-header-gradient change-header-color" data-bgcolor="#c8c8c8">
+                <div class="content-row full light-section disable-header-gradient change-header-color" data-bgcolor="#c1bbf0">
                     
                     <figure class="has-parallax">
                         <img src="images/projects/son02.jpg" alt="Image Title">
@@ -97,7 +97,7 @@
                 
                 
                 <!-- Row -->
-                <div class="content-row small row_padding_top row_padding_bottom light-section text-align-center" data-bgcolor="#c8c8c8">
+                <div class="content-row small row_padding_top row_padding_bottom light-section text-align-center" data-bgcolor="#c1bbf0">
                     
                     <div class="pinned-lists-wrapper scale-mode" data-duration="2x">
                         <p class="has-shuffle-onscroll">Best Features</p>                               
@@ -115,7 +115,7 @@
                 
                 
                 <!-- Row -->
-                <div class="content-row full light-section" data-bgcolor="#c8c8c8">
+                <div class="content-row full light-section" data-bgcolor="#c1bbf0">
                     
                     <div class="clapat-slider-wrapper content-slider small-looped-carousel has-animation autocenter light-cursor">
                         <div class="clapat-slider">

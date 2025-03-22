@@ -54,7 +54,7 @@
                                                 <div class="slide-caption">
                                                     <div class="slide-date"><span>{{$product->price}}</span></div>
                                                     <div class="slide-title"><span>{{$product->product_name}}</span></div>
-                                                    <div class="slide-cat"><span>{{$product->category->category_name}}</span></div>
+                                                    <div class="slide-cat"><span>{{$product->company->company_name}}</span></div>
                                                 </div>
                                                 <div class="slide-thumb speed-50">
                                                     <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" alt="">

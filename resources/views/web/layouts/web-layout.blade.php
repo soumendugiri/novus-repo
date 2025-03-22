@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         /* Container for the effect */
         #hero-styles {
@@ -233,6 +234,20 @@
     <script src="{{ custom_asset('web/js/common.js') }}"></script>
     <script src="{{ custom_asset('web/js/contact.js') }}"></script>
     <script src="{{ custom_asset('web/js/scripts.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
 
    
 </body>

@@ -85,7 +85,7 @@
                         
                         
                         <!-- Row -->
-                        <div class="content-row full row_padding_top row_padding_bottom light-section" data-bgcolor="#c8c8c8">
+                        <div class="content-row full row_padding_top row_padding_bottom light-section" data-bgcolor="#c1bbf0">
                             
                             <div class="team-list-wrapper">
                                 
@@ -188,7 +188,7 @@
                         
                         
                         <!-- Row -->
-                        <div class="content-row row_padding_top text-align-center light-section" data-bgcolor="#c8c8c8">
+                        <div class="content-row row_padding_top text-align-center light-section" data-bgcolor="#c1bbf0">
                             
                             <p class="bigger has-shuffle secondary-font">Recognition</p>
                             <h2 class="has-animation">Awards Received</h2>

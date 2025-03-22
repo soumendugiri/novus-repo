@@ -126,7 +126,7 @@
                         
                         
                         <!-- Row -->
-                        <div class="content-row full text-align-center dark-section disable-header-gradient" data-bgcolor="#c8c8c8">                                
+                        <div class="content-row full text-align-center dark-section disable-header-gradient" data-bgcolor="#c1bbf0">                                
                             
                             <div class="snap-slider-holder">
                                 
@@ -172,7 +172,7 @@
                                                     <div class="slide-title"><span>{{ $product->product_name }}</span></div>                                                      
                                                     <div class="slide-current"><span>{{ $key+1 }}</span></div>
                                                     <div class="slide-counter"><span>{{ count($data['products']) }}</span></div>
-                                                    <div class="slide-subtitle"><span>{{ $product->category->category_name }}</span></div>
+                                                    <div class="slide-subtitle"><span>{{ $product->company->company_name }}</span></div>
                                                 </div>
                                             @endforeach
                                         
@@ -185,8 +185,8 @@
                         <!--/Row -->
                         
                         
-                        <!-- Row -->
-                        <div class="content-row small text-align-center light-section" data-bgcolor="#c8c8c8">
+                        {{-- <!-- Row -->
+                        <div class="content-row small text-align-center light-section" data-bgcolor="#c1bbf0">
                             
                             <hr><hr><hr>
                                     
@@ -208,10 +208,14 @@
                                 
                             
                         </div> 
-                        <!--/Row -->
+                        <!--/Row --> --}}
+
+                        
+
+
             
                         <!-- Row -->
-                        <div class="content-row row_padding_top text-align-center light-section" data-bgcolor="#c8c8c8"> 
+                        <div class="content-row row_padding_top text-align-center light-section" data-bgcolor="#c1bbf0"> 
                             
                             <div class="pinned-lists-wrapper font-mode" data-duration="1x">
                                 <p>You need it? We do it</p>                               
@@ -226,52 +230,11 @@
                             
                         </div> 
                         <!--/Row -->
+                    
                         
                         
                         <!-- Row -->
-                        <div class="content-row row_padding_top light-section text-align-center" data-bgcolor="#c8c8c8">                                   	
-                                    
-                                    
-                            <div class="one_third has-animation" data-delay="100">
-                                
-                                <div class="box-icon-wrapper block-boxes">
-                                    <div class="box-icon">
-                                        <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="box-icon-content">
-                                        <h6 class="no-margins">Kaurain wala Chowk, near Maini Hospital, Old City, Kot Kapura, Punjab 151204</h6>
-                                        <p>Address</p>
-                                    </div>
-                                </div> 
-                                                        
-                            </div>
-                            
-                            <div class="one_third has-animation"  data-delay="200">
-                                
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.923854467575!2d74.8268458!3d30.5796949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3917337badc1bfe1%3A0xac749c7e20d9762a!2sNovus%20Forensics!5e0!3m2!1sen!2sin!4v1742037467653!5m2!1sen!2sin" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                        
-                            </div>
-                            
-                            <div class=" one_third last has-animation"  data-delay="300">
-                                
-                                <div class="box-icon-wrapper block-boxes">
-                                    <div class="box-icon">
-                                        <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="box-icon-content">
-                                        <h6 class="no-margins">9779421635</h6>
-                                        <p>Phone</p>
-                                    </div>
-                                </div>
-                                
-                            </div> 
-                                                    
-                        </div> 
-                        <!--/Row -->
-                        
-                        
-                        <!-- Row -->
-                        <div class="content-row full row_padding_top light-section text-align-center" data-bgcolor="#c8c8c8">
+                        <div class="content-row full row_padding_top light-section text-align-center" data-bgcolor="#c1bbf0">
                             
                             <p class="bigger has-shuffle no-margins secondary-font">Ready to work together?</p>
                             <div id="copy-email" data-hover-message="Copy Mail" data-clicked-message="Copied"><span>info@novusforensics.org</span></div>
@@ -288,7 +251,7 @@
             
                     
             <!-- Page Navigation --> 
-            <div id="page-nav" class="move-nav-onload">
+            {{-- <div id="page-nav" class="move-nav-onload">
                 <div class="page-nav-wrap">
                     <div class="page-nav-caption nav-full-caption content-full-width text-align-center">                                 
                         <div class="inner">
@@ -298,9 +261,85 @@
                         </div>               
                     </div>
                 </div>
-            </div>      
+            </div>       --}}
+
             <!--/Page Navigation -->
-            
+
+            <!--/Testimonials -->
+            <div class="testimonial_padding_top testimonials text-align-center">
+                <div class="max-w-4xl mx-auto text-center">
+                  <h3 class="text-2xl font-bold mb-6">What Our Clients Say</h3>
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <!-- Testimonial 1 -->
+                      <div class="swiper-slide p-6 bg-gray-800 rounded-xl shadow-md flex flex-col items-center">
+                        <img src="{{ custom_asset('web/images/team4.jpg') }}" alt="John Doe" class="w-16 h-16 rounded-full mb-4">
+                        <p class="italic">"Sudriva delivered beyond our expectations. Their team is top-notch!"</p>
+                        <h4 class="mt-4 font-semibold">- John Doe</h4>
+                      </div>
+                      <!-- Testimonial 2 -->
+                      <div class="swiper-slide p-6 bg-gray-800 rounded-xl shadow-md flex flex-col items-center">
+                        <img src="{{ custom_asset('web/images/team3.jpg') }}" alt="Jane Smith" class="w-16 h-16 rounded-full mb-4">
+                        <p class="italic">"Excellent service! Highly recommended for any business looking for quality."</p>
+                        <h4 class="mt-4 font-semibold">- Jane Smith</h4>
+                      </div>
+                      <!-- Testimonial 3 -->
+                      <div class="swiper-slide p-6 bg-gray-800 rounded-xl shadow-md flex flex-col items-center">
+                        <img src="{{ custom_asset('avatar/user.png') }}" alt="Mark Johnson" class="w-5 h-5 rounded-full mb-4 object-cover border-2 border-white">
+                        <p class="italic">"Professional and reliable. Sudriva transformed our online presence!"</p>
+                        <h4 class="mt-4 font-semibold">- Mark Johnson</h4>
+                      </div>
+                    </div>
+                    <!-- Pagination and Navigation -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+            </div>
+            <!--/Testimonials -->
+
+             <!-- Row -->
+             <div class="content-row row_padding_top light-section text-align-center" data-bgcolor="#c1bbf0">                                   	
+                                    
+                                    
+                <div class="one_third has-animation" data-delay="100">
+                    
+                    <div class="box-icon-wrapper block-boxes">
+                        <div class="box-icon">
+                            <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="box-icon-content">
+                            <h6 class="no-margins">Kaurain wala Chowk, near Maini Hospital, Old City, Kot Kapura, Punjab 151204</h6>
+                            <p>Address</p>
+                        </div>
+                    </div> 
+                                            
+                </div>
+                
+                <div class="one_third has-animation"  data-delay="200">
+                    <div class="map-wrapper">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.923854467575!2d74.8268458!3d30.5796949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3917337badc1bfe1%3A0xac749c7e20d9762a!2sNovus%20Forensics!5e0!3m2!1sen!2sin!4v1742037467653!5m2!1sen!2sin" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                                            
+                </div>
+                
+                <div class=" one_third last has-animation"  data-delay="300">
+                    
+                    <div class="box-icon-wrapper block-boxes">
+                        <div class="box-icon">
+                            <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="box-icon-content">
+                            <h6 class="no-margins">9779421635</h6>
+                            <p>Phone</p>
+                        </div>
+                    </div>
+                    
+                </div> 
+                                        
+            </div> 
+            <!--/Row -->
                     
         </div>
         <!--/Main Content --> 

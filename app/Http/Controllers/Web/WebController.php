@@ -14,7 +14,7 @@ class WebController extends Controller {
 
 	public function index() {
 		
-		$data['products'] = Product::with(['category', 'images'])
+		$data['products'] = Product::with(['company', 'images'])
 			->where('publication_status', 1)
 			->inRandomOrder()
 			->limit(20)
@@ -26,7 +26,7 @@ class WebController extends Controller {
 
 	public function products(){
 
-		$data['products'] = Product::with(['category','images'])->where('publication_status', 1)->get();
+		$data['products'] = Product::with(['company','images'])->where('publication_status', 1)->get();
 		return view('web.products',$data);
 	}
 
@@ -34,7 +34,7 @@ class WebController extends Controller {
 		
 		$pid=base64_decode($pid);
 		
-		$productData = Product::with(['category','images'])->where('id', $pid)->first();
+		$productData = Product::with(['company','images'])->where('id', $pid)->first();
 		
 		$randomNextProduct = Product::where('id', '!=', $pid)
 			->inRandomOrder()
