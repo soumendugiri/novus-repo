@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Company;
 use App\Product;
 use App\ProductImage;
-use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Image;
@@ -45,18 +44,19 @@ class ProductController extends Controller {
 	}
 
 	public function create() {
-		$categories = Category::where('publication_status', 1)->get(['id', 'category_name']);
-		$tags = Tag::where('publication_status', 1)->get(['id', 'tag_name']);
-		return view('admin.product.create', compact('categories', 'tags'));
+		$companies = Company::where('publication_status', 1)->get(['id', 'company_name']);
+		// $tags = Tag::where('publication_status', 1)->get(['id', 'tag_name']);
+		return view('admin.product.create', compact('companies'));
 	}
 
 	public function store(Request $request) {
 		$request->validate([
-			'category_id' => 'required',
+			'company_id' => 'required',
 			'product_name' => 'required|string|max:255',
 			'product_sku' => 'required|alpha_dash|min:5|max:150|unique:products',
 			'price' => 'required|numeric',
 			'stock' => 'required|integer',
+			'product_fetures' => 'nullable|string',
 			'product_details' => 'required|string',
 			'featured_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240|dimensions:max_width=10000,max_height=10000',
 			'publication_status' => 'required',
@@ -65,17 +65,18 @@ class ProductController extends Controller {
 			'meta_keywords' => 'required|max:250',
 			'meta_description' => 'required|max:400',
 		], [
-			'featured_image.dimensions' => 'Max dimensions 10000x10000',
-			'category_id.required' => 'The category field is required.',
+			// 'featured_image.dimensions' => 'Max dimensions 10000x10000',
+			'company_id.required' => 'The company field is required.',
 		]);
-
+		// dd($request->all());
 		$product = Product::create([
 			'user_id' => Auth::user()->id,
 			'product_name' => $request->input('product_name'),
 			'product_sku' => $request->input('product_sku'),
-			'category_id' => $request->input('category_id'),
+			'company_id' => $request->input('company_id'),
 			'price' => $request->input('price'),
 			'stock' => $request->input('stock'),
+			'product_fetures' => $request->input('product_fetures'),
 			'publication_status' => $request->input('publication_status'),
 			'is_featured' => $request->input('is_featured'),
 			'youtube_video_url' => $request->input('youtube_video_url'),
@@ -169,16 +170,16 @@ class ProductController extends Controller {
 	}
 
 	public function show($id) {
-		$Product = Product::with(['category:id,category_name', 'user:id,name'])->where('id', $id)
+		$Product = Product::with(['company:id,company_name', 'user:id,name'])->where('id', $id)
 			->first();
 		return json_encode($Product);
 	}
 
 	public function edit($id) {
 		$product = Product::where('id', $id)->first();
-		$categories = Category::where('publication_status', 1)->get(['id', 'category_name']);
+		$companies = Company::where('publication_status', 1)->get(['id', 'company_name']);
 
-		return view('admin.product.edit', compact('product', 'categories'));
+		return view('admin.product.edit', compact('product', 'companies'));
 	}
 
 	public function update(Request $request, $id) {
@@ -192,12 +193,13 @@ class ProductController extends Controller {
 		}
 
 		$request->validate([
-			'category_id' => 'required',
+			'company_id' => 'required',
 			'product_name' => 'required|string|max:255',
 			'product_sku' => $product_sku,
 			'price' => 'required|numeric',
 			'stock' => 'required|integer',
 			'product_details' => 'required|string',
+			'product_fetures' => 'required|string',
 			'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240|dimensions:max_width=10000,max_height=10000',
 			'publication_status' => 'required',
 			'is_featured' => 'required',
@@ -206,14 +208,15 @@ class ProductController extends Controller {
 			'meta_description' => 'required|max:400',
 		], [
 			'featured_image.dimensions' => 'Max dimensions 10000x10000',
-			'category_id.required' => 'The category field is required.',
+			'company_id.required' => 'The company field is required.',
 		]);
 
 		$product->product_name = $request->input('product_name');
 		$product->product_sku = $request->input('product_sku');
-		$product->category_id = $request->input('category_id');
+		$product->company_id = $request->input('company_id');
 		$product->price = $request->input('price');
 		$product->stock = $request->input('stock');
+		$product->product_fetures = $request->input('product_fetures');
 		$product->publication_status = $request->input('publication_status');
 		$product->is_featured = $request->input('is_featured');
 		$product->youtube_video_url = $request->input('youtube_video_url');

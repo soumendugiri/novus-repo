@@ -9,9 +9,10 @@ class Product extends Model {
 		'user_id',
 		'product_name',
 		'product_sku',
-		'category_id',
+		'company_id',
 		'price',
 		'stock',
+		'product_fetures',
 		'publication_status',
 		'is_featured',
 		'featured_image',
@@ -22,8 +23,8 @@ class Product extends Model {
 		'meta_description',
 	];
 
-	public function category() {
-		return $this->belongsTo(Category::class);
+	public function company() {
+		return $this->belongsTo(Company::class);
 	}
 
 	public function user() {

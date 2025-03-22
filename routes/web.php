@@ -48,6 +48,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin'], 'as' => 'a
 	Route::get('/categories/published/{id}', ['as' => 'publishedCategoriesRoute', 'uses' => 'CategoryController@published']);
 	Route::get('/categories/unpublished/{id}', ['as' => 'unpublishedCategoriesRoute', 'uses' => 'CategoryController@unpublished']);
 
+	/*** For Company ***/
+	Route::resource('companies', 'CompanyController');
+	Route::get('/get-companies', ['as' => 'getCompaniesRoute', 'uses' => 'CompanyController@get']);
+	Route::get('/companies/published/{id}', ['as' => 'publishedCompaniesRoute', 'uses' => 'CompanyController@published']);
+	Route::get('/companies/unpublished/{id}', ['as' => 'unpublishedCompaniesRoute', 'uses' => 'CompanyController@unpublished']);
+
 	/*** For Tag ***/
 	Route::resource('tags', 'TagController');
 	Route::get('/get-tags', ['as' => 'getTagsRoute', 'uses' => 'TagController@get']);

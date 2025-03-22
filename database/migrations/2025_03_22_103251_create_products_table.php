@@ -16,9 +16,10 @@ class CreateProductsTable extends Migration {
 			$table->integer('user_id')->unsigned()->index();
             $table->string('product_name');
             $table->string('product_sku')->unique();
-			$table->integer('category_id')->unsigned()->index();
+			$table->integer('company_id')->unsigned()->index();
             $table->decimal('price', 10, 2);
             $table->integer('stock')->default(0);
+			$table->text('product_fetures')->nullable();
             $table->boolean('publication_status')->default(1);
             $table->boolean('is_featured')->default(0);
 			$table->string('featured_image')->nullable();
@@ -28,7 +29,7 @@ class CreateProductsTable extends Migration {
             $table->text('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-			$table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+			$table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->timestamps();
 		});
 	}

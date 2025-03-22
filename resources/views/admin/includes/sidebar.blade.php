@@ -19,6 +19,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <!-- <li class="{{ Request::is('admin/dashboard') ? "active" : '' }}"><a href="{{ route('admin.dashboardRoute') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li> -->
         <li><a href="{{ route('admin.dashboardRoute') }}"><i class="fa fa-home text-purple"></i> <span>Dashboard</span></a></li>
+        <li><a href="{{ route('admin.companies.index') }}"><i class="fa fa-paper-plane text-purple"></i> <span>Company</span></a></li>
         <li><a href="{{ route('admin.categories.index') }}"><i class="fa fa-paper-plane text-purple"></i> <span>Category</span></a></li>
         <li><a href="{{ route('admin.tags.index') }}"><i class="fa fa-tag text-purple"></i> <span>Tag</span></a></li>
         <li><a href="{{ route('admin.products.index') }}"><i class="fa fa-envelope-o text-purple"></i> <span>Product</span></a></li>

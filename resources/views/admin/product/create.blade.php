@@ -39,6 +39,37 @@
 	margin-right: 4px;
 }
 </style>
+
+<style>
+        .multi-input-container {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: text;
+        }
+        .multi-input-container input {
+            border: none;
+            flex: 1;
+            min-width: 100px;
+            padding: 5px;
+            outline: none;
+        }
+        .multi-tag {
+            background-color: #007bff;
+            color: white;
+            border-radius: 3px;
+            padding: 3px 8px;
+            margin: 2px;
+            display: flex;
+            align-items: center;
+        }
+        .multi-tag span {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -114,18 +145,32 @@
 						@endif
 					</div>
 				</div>
-				<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
-					<label for="category_id" class="col-md-2 control-label">Category</label>
+				<div class="form-group{{ $errors->has('company_id') ? ' has-error' : '' }}">
+					<label for="company_id" class="col-md-2 control-label">Company</label>
 					<div class="col-md-5">
-						<select name="category_id" class="form-control" id="category_id">
+						<select name="company_id" class="form-control" id="company_id">
 							<option value="" selected disabled>Select One</option>
-							@foreach($categories as $category)
-							<option value="{{ $category->id }}">{{ $category->category_name}}</option>
+							@foreach($companies as $company)
+							<option value="{{ $company->id }}">{{ $company->company_name}}</option>
 							@endforeach
 						</select>
-						@if ($errors->has('category_id'))
+						@if ($errors->has('company_id'))
 						<span class="help-block">
-							<strong>{{ $errors->first('category_id') }}</strong>
+							<strong>{{ $errors->first('company_id') }}</strong>
+						</span>
+						@endif
+					</div>
+				</div>
+				<div class="form-group{{ $errors->has('product_fetures') ? ' has-error' : '' }}">
+					<label for="multiInput" class="col-md-2 control-label">Features</label>
+					<div class="col-md-5">
+					<div class="multi-input-container" id="multiInput">
+						<input type="text" id="multiInputField" placeholder="Add features and press tab">
+					</div>
+					<input type="hidden" name="product_fetures" id="product_fetures_hidden">
+						@if ($errors->has('product_fetures'))
+						<span class="help-block">
+							<strong>{{ $errors->first('product_fetures') }}</strong>
 						</span>
 						@endif
 					</div>
@@ -293,7 +338,41 @@
 })
 </script>
 <script type="text/javascript">
-	document.forms['product_add_form'].elements['category_id'].value = "{{ old('category_id') }}";
+	document.forms['product_add_form'].elements['company_id'].value = "{{ old('company_id') }}";
 	document.forms['product_add_form'].elements['publication_status'].value = "{{ old('publication_status') }}";
+
+	const container = document.getElementById('multiInput');
+    const input = document.getElementById('multiInputField');
+    const hiddenField = document.getElementById('product_fetures_hidden');
+
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === 'Tab') {
+            event.preventDefault();
+            const value = input.value.trim();
+            if (value) {
+                addTag(value);
+                input.value = '';
+            }
+        }
+    });
+
+    function addTag(text) {
+        const tag = document.createElement('div');
+        tag.className = 'multi-tag';
+        tag.textContent = text;
+
+        const close = document.createElement('span');
+        close.textContent = '×';
+        close.addEventListener('click', function() {
+            tag.remove();
+        });
+
+        tag.appendChild(close);
+        container.insertBefore(tag, input);
+
+		const tags = [...document.querySelectorAll('#multiInput .multi-tag')].map(tag => tag.childNodes[0].textContent.trim());
+        hiddenField.value = tags.join(',');
+    }
 </script>
+
 @endsection
