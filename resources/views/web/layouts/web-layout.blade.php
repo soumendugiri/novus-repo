@@ -112,7 +112,7 @@
                                         </ul>
                                     </li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="what we do">what we do</span></div></a></li>
-                                    <li class="menu-timeline link"><a class="{{ Request::is(['products','product_desc/*']) ? 'active' : '' }}" data-type="page-transition" href="{{ route('allProductsRoute') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>
+                                    <li class="menu-timeline link"><a class="{{ Request::is(['companies','products/*','product_desc/*']) ? 'active' : '' }}" data-type="page-transition" href="{{ route('web.companies') }}"><div class="before-span"><span data-hover="Products">Products</span></div></a></li>
                                     <li class="menu-timeline link"><a class="ajax-link" data-type="page-transition" href="#"><div class="before-span"><span data-hover="from our experts">From our experts</span></div></a></li>
                                 </ul>
                             </div>          

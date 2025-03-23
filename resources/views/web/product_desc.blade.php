@@ -11,10 +11,6 @@
                     
                     <div class="inner">   
                         <h1 class="hero-title caption-timeline"><span>{{ $product['product']->company->company_name }}</span><span>{{ $product['product']->product_name }}</span></h1>
-                        <div class="hero-subtitle caption-timeline onload-shuffle">
-                            <div><span>{{ $product['product']->product_name }}:</span></div> 
-                            <div class="secondary-font"><span><span>{!! $product['product']->product_details !!}</span></span></div>
-                        </div>
                     </div>
                     
                     <div id="hero-footer" class="">
@@ -47,9 +43,12 @@
         <!-- Main Content -->
         <div id="main-content">
             <div id="main-page-content">
-            
-            
                 
+                <div class="row_padding_top content-row small row_padding_bottom light-section text-align-center" data-bgcolor="transparent">          
+                    <div><span>{{ $product['product']->product_name }}:</span></div> 
+                    <div class="secondary-font"><span><span>{!! $product['product']->product_details !!}</span></span></div>    
+                </div>
+
                 <!-- Row -->
                 <div class="content-row small row_padding_top light-section" data-bgcolor="#c1bbf0">
                     
@@ -63,36 +62,13 @@
                 
                 
                 <!-- Row -->
-                <div class="content-row small row_padding_bottom light-section text-align-center" data-bgcolor="#c1bbf0">
-                    
-                    <hr><hr class="destroy">
-                    <p class="has-opacity">These images are credited to the following author.</p>
-                    <br>
-                    
-                    <div class="button-box has-animation" data-delay="100">             
-                        <div class="clapat-button-wrap parallax-wrap hide-ball">
-                            <div class="clapat-button parallax-element">
-                                <div class="button-border rounded parallax-element-second">
-                                    <a target="_blank" href="#">
-                                        <span data-hover="View Project">View Project</span>
-                                        </a>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                    
-                </div> 
-                <!--/Row -->
-                
-                
-                <!-- Row -->
-                <div class="content-row full light-section disable-header-gradient change-header-color" data-bgcolor="#c1bbf0">
+                {{-- <div class="content-row full light-section disable-header-gradient change-header-color" data-bgcolor="#c1bbf0">
                     
                     <figure class="has-parallax">
                         <img src="images/projects/son02.jpg" alt="Image Title">
                     </figure>
                     
-                </div> 
+                </div>  --}}
                 <!--/Row -->
                 
                 
@@ -102,14 +78,12 @@
                     <div class="pinned-lists-wrapper scale-mode" data-duration="2x">
                         <p class="has-shuffle-onscroll">Best Features</p>                               
                         <ul class="pinned-lists2">
-                            <li>No special driving license necessary</li>
-                            <li>Covert design possible</li>
-                            <li>Covert design - does not attract attention</li>
-                            <li>UPS with 10 hour battery backup</li>
-                            <li>noise insulation</li>
+                            @foreach(explode(',',$product['product']->product_fetures ?? []) as $feture)
+                             <li>{{ $feture }}</li>
+                            @endforeach
                         </ul>
                     </div>
-                    
+            
                 </div> 
                 <!--/Row -->
                 

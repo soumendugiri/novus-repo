@@ -17,7 +17,8 @@ Route::group(['prefix' => '/'], function () {
 
 	Route::get('/', 'Web\WebController@index')->name('web.home');
 	Route::get('/collaborators', 'Web\WebController@collaborators')->name('web.collaborators');
-	Route::get('/products', ['as' => 'allProductsRoute', 'uses' => 'Web\WebController@products']);
+	Route::get('/companies', ['as' => 'web.companies', 'uses' => 'Web\WebController@companies']);
+	Route::get('/products/{cid}', ['as' => 'allProductsRoute', 'uses' => 'Web\WebController@products']);
 	Route::get('/product_desc/{pid}', 'Web\WebController@product_desc')->name('web.product_desc');
 	Route::get('/clients', 'Web\WebController@clients')->name('web.clients');
 

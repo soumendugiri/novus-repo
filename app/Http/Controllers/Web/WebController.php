@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use App\Product;
+use App\Company;
 
 class WebController extends Controller {
 
@@ -24,10 +25,17 @@ class WebController extends Controller {
 		return view('web.index',compact('data'));
 	}
 
-	public function products(){
-
-		$data['products'] = Product::with(['company','images'])->where('publication_status', 1)->get();
+	public function products($cid){
+		
+		$cid=base64_decode($cid);
+		$data['products'] = Product::with(['company','images'])->where('company_id', $cid)->where('publication_status', 1)->get();
 		return view('web.products',$data);
+	}
+
+	public function companies(){
+
+		$data['companies'] = Company::where('publication_status', 1)->get();
+		return view('web.companies',$data);
 	}
 
 	public function product_desc($pid){

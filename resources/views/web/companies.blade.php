@@ -11,7 +11,7 @@
                 <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center hero-full-caption">
                     <div class="inner">                                
                         <h1 class="hero-title caption-timeline onload-shuffle">
-                            <span>Products</span>
+                            <span>Companies</span>
                         </h1>                                                                       
                     </div>                                
                 </div>                          
@@ -35,30 +35,29 @@
                                 
                                 <!-- ClaPat Main Slider -->
                                 <div class="clapat-slider-viewport">
-                                    @if(!$products->isEmpty())
-                                        @foreach ($products as $product)
+                                    @if (!$companies->isEmpty())
+                                        @foreach ($companies as $cmpny)
                                             <div class="clapat-slide">                                            	
                                                 <div class="slide-effects align-center has-scale-large">                                            
                                                     <div class="slide-inner-height" data-centerLine="VIEW">
                                                         <div class="slide-moving">
                                                             <div class="trigger-item change-header" data-centerLine="OPEN" data-projectbgcolor="#c1bbf0">
                                                                 <div class="img-mask">
-                                                                    <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
+                                                                    <a class="slide-link" data-type="page-transition" href="{{ route('allProductsRoute',['cid'=>base64_encode($cmpny->id)]) }}"></a>
                                                                     <div class="section-image trigger-item-link">
-                                                                        <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="item-image grid__item-img" alt="">
+                                                                        <img src="{{ get_featured_image_thumbnail_url($cmpny->company_logo) }}" class="item-image grid__item-img" alt="">
                                                                     </div>                                                
-                                                                    <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" class="grid__item-img grid__item-img--large" alt="">
+                                                                    <img src="{{ get_featured_image_thumbnail_url($cmpny->company_logo) }}" class="grid__item-img grid__item-img--large" alt="">
                                                                 </div>
                                                             </div>                                                         
                                                         </div>                                                            
                                                     </div>
                                                     <div class="slide-caption">
-                                                        <div class="slide-date"><span>{{$product->price}}</span></div>
-                                                        <div class="slide-title"><span>{{$product->product_name}}</span></div>
-                                                        <div class="slide-cat"><span>{{$product->company->company_name}}</span></div>
+                                                        <div class="slide-title"><span>{{$cmpny->company_name}}</span></div>
+                                                        <div class="slide-cat"><span>{{$cmpny->company_desc}}</span></div>
                                                     </div>
                                                     <div class="slide-thumb speed-50">
-                                                        <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" alt="">
+                                                        <img src="{{ get_featured_image_thumbnail_url($cmpny->company_logo) }}" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -72,19 +71,19 @@
                                                             <div class="img-mask">
                                                                 <a class="slide-link" data-type="page-transition" href="#"></a>
                                                                 <div class="section-image trigger-item-link">
-                                                                    <img src="{{ custom_asset('web/images/no-product.png') }}" class="item-image grid__item-img" alt="">
+                                                                    <img src="{{ custom_asset('web/images/nodatafound.png') }}" class="item-image grid__item-img" alt="">
                                                                 </div>                                                
-                                                                <img src="{{ custom_asset('web/images/no-product.png') }}" class="grid__item-img grid__item-img--large" alt="">
+                                                                <img src="{{ custom_asset('web/images/nodatafound.png') }}" class="grid__item-img grid__item-img--large" alt="">
                                                             </div>
                                                         </div>                                                         
                                                     </div>                                                            
                                                 </div>
                                                 <div class="slide-caption">
-                                                    <div class="slide-date"><span>0</span></div>
-                                                    <div class="slide-title"><span>No product found</span></div>
+                                                    <div class="slide-title"><span>No company found</span></div>
+                                                    <div class="slide-cat"><span>0</span></div>
                                                 </div>
                                                 <div class="slide-thumb speed-50">
-                                                    <img src="{{ custom_asset('web/images/no-product.png') }}" alt="">
+                                                    <img src="{{ custom_asset('web/images/nodatafound.png') }}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -96,44 +95,44 @@
                                 <!-- ClaPat Sync Slider -->
                                 <div class="clapat-sync-slider">      
                                     <div class="clapat-sync-slider-wrapper">
-                                        <div class="clapat-sync-slider-viewport"> 
-                                        @if (!$products->isEmpty())
-                                                                           
-                                            @foreach ($products as $product)
+                                        <div class="clapat-sync-slider-viewport">  
+                                           
+                                            @if(!$companies->isEmpty())                                          
+                                                @foreach ($companies as $cmpny)
+                                                    <div class="clapat-sync-slide">                                                	
+                                                        <div class="trigger-item" data-centerLine="OPEN" data-projectbgcolor="#e1dedf" data-projectcolor="#c1bbf0">
+                                                            <div class="hover-reveal landscape1">
+                                                                <div class="hover-reveal__inner">
+                                                                    <div class="hover-reveal__img">
+                                                                        <img src="{{get_featured_image_thumbnail_url($cmpny->company_logo)}}" class="item-image grid__item-img" alt="">                                             
+                                                                        <img class="grid__item-img grid__item-img--large" src="{{get_featured_image_thumbnail_url($cmpny->company_logo)}}" alt="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <a class="slide-link" data-type="page-transition" href="{{ route('allProductsRoute',['cid'=>base64_encode($cmpny->id)]) }}"></a>
+                                                            <div class="slide-title trigger-item-link modify-color"><span>{{$cmpny->company_name}}</span></div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach 
+                                            @else
                                                 <div class="clapat-sync-slide">                                                	
                                                     <div class="trigger-item" data-centerLine="OPEN" data-projectbgcolor="#e1dedf" data-projectcolor="#c1bbf0">
                                                         <div class="hover-reveal landscape1">
                                                             <div class="hover-reveal__inner">
                                                                 <div class="hover-reveal__img">
-                                                                    <img src="{{get_featured_image_thumbnail_url($product->featured_image)}}" class="item-image grid__item-img" alt="">                                             
-                                                                    <img class="grid__item-img grid__item-img--large" src="{{get_featured_image_thumbnail_url($product->featured_image)}}" alt="" />
+                                                                    <img src="{{ custom_asset('web/images/nodatafound.png') }}" class="item-image grid__item-img" alt="">                                             
+                                                                    <img class="grid__item-img grid__item-img--large" src="{{ custom_asset('web/images/nodatafound.png') }}" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         
-                                                        <a class="slide-link" data-type="page-transition" href="{{ route('web.product_desc',['pid'=>base64_encode($product->id)]) }}"></a>
-                                                        <div class="slide-title trigger-item-link modify-color"><span>{{$product->product_name}}</span></div>
+                                                        <a class="slide-link" data-type="page-transition" href="#"></a>
+                                                        <div class="slide-title trigger-item-link modify-color"><span>No company found</span></div>
                                                     </div>
                                                 </div>
-                                            @endforeach  
-                                        @else
-                                            <div class="clapat-sync-slide">                                                	
-                                                <div class="trigger-item" data-centerLine="OPEN" data-projectbgcolor="#e1dedf" data-projectcolor="#c1bbf0">
-                                                    <div class="hover-reveal landscape1">
-                                                        <div class="hover-reveal__inner">
-                                                            <div class="hover-reveal__img">
-                                                                <img src="{{ custom_asset('web/images/no-product.png') }}" class="item-image grid__item-img" alt="">                                             
-                                                                <img class="grid__item-img grid__item-img--large" src="{{ custom_asset('web/images/no-product.png') }}" alt="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <a class="slide-link" data-type="page-transition" href="#"></a>
-                                                    <div class="slide-title trigger-item-link modify-color"><span>No product found</span></div>
-                                                </div>
-                                            </div>
-                                        @endif
-                                        
+                                            @endif
+
                                         </div>
                                     </div>
                                 </div>
