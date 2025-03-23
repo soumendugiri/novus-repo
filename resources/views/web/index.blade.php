@@ -12,12 +12,12 @@
                     <source src="{{ custom_asset('web/images/bg3.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center hero-full-caption">
+                <div id="hero-caption" class="content-full-width2 parallax-scroll-caption text-align-center hero-full-caption">
                     <div class="inner">
                     
-                        <h1 class="hero-title caption-timeline" data-infoTextBefore="Welcome" data-infoTextAfter="Est. 2025" style="color: white;">
-                            <div><span style="color: white;">Novus</span></div>
-                        </h1>
+                        <h2 class="hero-title caption-timeline" data-infoTextBefore="Welcome" data-infoTextAfter="Est. 2025" style="color: white;">
+                            <div><img class="black-logo" style="margin-left: 10%" src="{{ custom_asset('web/images/nov-logo.png')}}" alt="nov Logo"></div>
+                        </h2>
                         
                         <div class="hero-subtitle caption-timeline onload-shuffle">
                             <div><span style="color: white;">Bringing brands to life through</span></div> 
@@ -37,18 +37,18 @@
                         </div>
                     </div>
                     <div class="hero-footer-right">
-                        <div id="info-text"><span style="color: white;">Featured Projects</span></div>
+                        <div id="info-text"><span style="color: white;"></span></div>
                     </div>
                 </div>                                                              
             </div>
             <div id="hero-interaction">
                 <div class="hero-column col-left">
-                    <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/01hero1.jpg')}}" alt=""></div>
-                    <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/01hero.jpg')}}" alt=""></div>
+                    <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/products1/2.png')}}" alt=""></div>
+                    <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/products1/5.png')}}" alt=""></div>
                 </div>
                 <div class="hero-column col-right">
-                    <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/images/02hero.jpg')}}" alt=""></div>
-                    <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/images/02hero1.jpg')}}" alt=""></div>
+                    <div class="col-img-wrapper large-img"><img src="{{ custom_asset('web/products1/10.jpg')}}" alt=""></div>
+                    <div class="col-img-wrapper small-img"><img src="{{ custom_asset('web/products1/7.png')}}" alt=""></div>
                 </div>
             </div>
         </div>                     
@@ -67,11 +67,11 @@
                         <!-- Row -->
                         <div class="content-row full row_padding_top row_padding_left row_padding_right light-section fadeout-element" data-bgcolor="transparent">
                     
-                            <div class="landing-intro-wrapper">
+                            <div class="three_fourth landing-intro-wrapper">
                             
                                 <h2 class="new-hero-title">
                                     <span>We’re</span> 
-                                    <div class="hero-title-placeholder"></div> 
+                                    <div style="width:45%;" class="hero-title-placeholder"></div> 
                                     <span>a <span class="text-rotator-wrapper secondary-font">  
                                             <span class="text-rotator">
                                                 <span>creative</span>
@@ -84,19 +84,20 @@
                                 </h2>
                             
                             </div>
-                            
+
+                             <div class="one_sixth row_padding_top">
+                                <img src="{{ custom_asset('web/images/nov-iso-dummy.png')}}" alt="">
+                             </div>
+
                         </div> 
                         <!--/Row -->
                         
-                        
                         <!-- Row -->
                         <div class="content-row full light-section row_padding_left row_padding_right row_padding_bottom fadeout-element" data-bgcolor="transparent"> 
+                           
+                            <div class="two_third"></div>
                             
-                            <hr>
-                            
-                            <div class="three_fourth"></div>
-                            
-                            <div class="one_fourth last vertical-parallax" data-startparallax="0" data-endparallax="0">
+                            <div class="one_third last vertical-parallax" data-startparallax="0" data-endparallax="0">
                                 
                                 <div class="landing-video content-timeline">
                                     <div class="content-video-wrapper">

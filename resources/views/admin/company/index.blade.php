@@ -40,6 +40,7 @@
 						<table id="companies-table" class="table table-striped table-hover dt-responsive display nowrap" cellspacing="0">
 							<thead>
 								<tr>
+									<th>Company Logo</th>
 									<th>Company Name</th>
 									<th>Company Slug</th>
 									<th>Created By</th>
@@ -75,7 +76,7 @@
 							Add Company
 						</h4>
 					</div>
-					<form role="form" id="company_add_form" method="post">
+					<form role="form" id="company_add_form" method="post" enctype="multipart/form-data">
 						{{ csrf_field() }}
 						<div class="modal-body">
 							<div class="form-group">
@@ -101,6 +102,12 @@
 									<option value="0">Unpublished</option>
 								</select>
 								<span class="text-danger" id="publication-status-error"></span>
+							</div>
+
+							<div class="form-group">
+								<label for="company_logo">Company logo</label>
+								<input type="file" name="company_logo" class="form-control" id="company_logo" value="{{ old('company_logo') }}" placeholder="ex: company logo">
+								<span class="text-danger" id="company_logo-error"></span>
 							</div>
 
 							<div class="bs-callout bs-callout-success">
@@ -240,7 +247,7 @@
 									Edit Company
 								</h4>
 							</div>
-							<form role="form" id="company_edit_form" method="post">
+							<form role="form" id="company_edit_form" method="post" enctype="multipart/form-data">
 								{{method_field('PATCH')}}
 								{{csrf_field()}}
 								<input type="hidden" name="company_id" id="edit-company-id">
@@ -269,6 +276,12 @@
 											<option value="0">Unpublished</option>
 										</select>
 										<span class="text-danger publication-status-error"></span>
+									</div>
+
+									<div class="form-group">
+										<label for="company_logo">Company logo</label>
+										<input type="file" name="company_logo" class="form-control" id="company_logo" value="{{ old('company_logo') }}" placeholder="ex: company logo">
+										<span class="text-danger" id="company_logo-error"></span>
 									</div>
 
 									<div class="bs-callout bs-callout-success">
@@ -449,8 +462,8 @@
 			var company_id = $('#edit-company-id').val();
 			var url = "{{ route('admin.companies.update', 'company_id') }}";
 			url = url.replace("company_id", company_id);
-			var company_edit_form = $("#company_edit_form");
-			var form_data = company_edit_form.serialize();
+			var company_edit_form = $("#company_edit_form")[0];
+			var form_data = new FormData(company_edit_form); 
 			$( '.category-name-error' ).html( "" );
 			$( '.category-slug-error' ).html( "" );
 			$( '.publication-status-error' ).html( "" );
@@ -461,6 +474,9 @@
 				url: url,
 				type:'POST',
 				data:form_data,
+				contentType: false, 
+				processData: false, 
+				cache: false,
 				success:function(data) {
 					console.log(data);
 					if(data.errors) {
@@ -531,8 +547,10 @@
 
 		/** Store **/
 		$("#store-button").click(function(){
-			var company_add_form = $("#company_add_form");
-			var form_data = company_add_form.serialize();
+			
+			var company_add_form = $("#company_add_form")[0];
+			var form_data = new FormData(company_add_form); 
+		
 			$( '#category-name-error' ).html( "" );
 			$( '#category-slug-error' ).html( "" );
 			$( '#publication-status-error' ).html( "" );
@@ -543,6 +561,9 @@
 				url:'{{ route('admin.companies.store') }}',
 				type:'POST',
 				data:form_data,
+				contentType: false, 
+				processData: false, 
+				cache: false,
 				success:function(data) {
 					console.log(data);
 					if(data.errors) {
@@ -554,6 +575,9 @@
 						}
 						if(data.errors.publication_status){
 							$( '#publication-status-error' ).html( data.errors.publication_status[0] );
+						}
+						if(data.errors.company_logo){
+							$( '#company_logo-error' ).html( data.errors.company_logo[0] );
 						}
 						if(data.errors.meta_title){
 							$( '#meta-title-error' ).html( data.errors.meta_title[0] );
@@ -592,6 +616,7 @@
 				serverSide: true,
 				ajax: "{{ route('admin.getCompaniesRoute') }}",
 				columns: [
+				{data: 'company_logo'},
 				{data: 'company_name'},
 				{data: 'company_slug'},
 				{data: 'username', name: 'username', orderable: true, searchable: true},

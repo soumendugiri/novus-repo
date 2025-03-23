@@ -1481,6 +1481,13 @@
 		max-width:100%;
 	}
 
+	.content-full-width2 {
+		box-sizing:border-box;
+		padding-left:80px;
+		padding-right:80px;
+		max-width:50%;
+	}
+
 	
 /*--------------------------------------------------
 	Responsive

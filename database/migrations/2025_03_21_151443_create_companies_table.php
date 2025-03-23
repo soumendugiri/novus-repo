@@ -19,6 +19,7 @@ class CreateCompaniesTable extends Migration
             $table->string('company_name');
             $table->string('company_slug', 190)->unique();
             $table->string('company_desc', 190)->nullable();
+            $table->string('company_logo')->nullable();
             $table->string('meta_title')->nullable();
             $table->string('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();

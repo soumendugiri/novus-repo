@@ -64,16 +64,16 @@
                                 
                                 <ul class="parallax-content">
                                     <li class="parallax-list">
-                                        <div><span>We are Novus</span></div>
-                                        <div><span> Digital forensics company</span></div>
+                                        <div><span>We are Forensic</span></div>
+                                        <div><span>Investigation organization.</span></div>
                                     </li>
                                     <li class="parallax-list">
-                                        <div><span>We bring ideas to life</span></div>
-                                        <div><span>We Are best</span></div>
+                                        <div><span>We built on</span></div>
+                                        <div><span>integrity and trust.</span></div>
                                     </li>
                                     <li class="parallax-list">
-                                        <div><span>Design with purpose</span></div>
-                                        <div><span>Solutions for businesses</span></div>
+                                        <div><span>Committed to ethical integrity</span></div>
+                                        <div><span>uncover the truth with precision.</span></div>
                                     </li>
                                 </ul>
 
@@ -92,27 +92,11 @@
                                 <ul class="team-list-captions">
                                     <li data-centerLine="Hello">
                                         <div class="tml-title"><span>Anmol</span> <span>Maini</span></div>
-                                        <div class="tml-cat">Founder</div>
+                                        <div class="tml-cat">Founder & Partner</div>
                                     </li>
                                     <li data-centerLine="Bonjour">
-                                        <div class="tml-title"><span>Lucas</span> <span>Martin</span></div>
-                                        <div class="tml-cat">Co-Founder</div>
-                                    </li>
-                                    <li data-centerLine="Hallo">                                                    
-                                        <div class="tml-title"><span>Emma</span> <span>Müller</span></div>
-                                        <div class="tml-cat">Web Designer</div>
-                                    </li>
-                                    <li data-centerLine="Salut">
-                                        <div class="tml-title"><span>Mark</span> <span>Spencer</span></div>
-                                        <div class="tml-cat">Web Developer</div>
-                                    </li>
-                                    <li data-centerLine="Holla">
-                                        <div class="tml-title"><span>Charlotte</span> <span>Dunn</span></div>
-                                        <div class="tml-cat">SEO Specialis</div>
-                                    </li>
-                                    <li data-centerLine="Apply">
-                                        <div class="tml-title"><span>John</span> <span>Doe</span></div>
-                                        <div class="tml-cat">Join our Team</div>
+                                        <div class="tml-title"><span>Akshay</span> <span>Singh</span></div>
+                                        <div class="tml-cat">Founder & Partner</div>
                                     </li>
                                 </ul>
                                 
@@ -132,34 +116,6 @@
                                             </div>                         
                                         </div>                                         
                                     </li>
-                                    <li>
-                                        <div class="img-mask">
-                                            <div class="section-image">
-                                                <img src="{{ custom_asset('web/images/team3.jpg') }}" class="item-image grid__item-img" alt="">
-                                            </div>                   
-                                        </div>
-                                    </li>
-                                    <li>
-                                            <div class="img-mask">
-                                            <div class="section-image">
-                                                <img src="{{ custom_asset('web/images/team4.jpg') }}" class="item-image grid__item-img" alt="">                                                            
-                                            </div>                          
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-mask">
-                                            <div class="section-image">
-                                                <img src="{{ custom_asset('web/images/team5.jpg') }}" class="item-image grid__item-img" alt="">
-                                            </div>         
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img-mask">
-                                            <div class="section-image">
-                                                <img src="{{ custom_asset('web/images/team6.jpg') }}" class="item-image grid__item-img" alt="">
-                                            </div>               
-                                        </div>
-                                    </li>
                                     <li class="pixels-cover"></li>
                                 </ul>
                                     
@@ -170,7 +126,7 @@
                         
                         
                         <!-- Row -->
-                        <div class="content-row has-clip-path row_padding_top row_padding_bottom dark-section change-header-color disable-header-gradient" data-bgcolor="#0c0c0c">
+                        {{-- <div class="content-row has-clip-path row_padding_top row_padding_bottom dark-section change-header-color disable-header-gradient" data-bgcolor="#0c0c0c">
                             
                             <div class="pinned-lists-wrapper scale-mode text-align-center" data-duration="3x">
                                 <p class="has-shuffle-onscroll">You need it? We do it</p>                               
@@ -183,15 +139,15 @@
                                 </ul>
                             </div>
                             
-                        </div> 
+                        </div>  --}}
                         <!--/Row -->                                    
                         
                         
                         <!-- Row -->
                         <div class="content-row row_padding_top text-align-center light-section" data-bgcolor="#c1bbf0">
                             
-                            <p class="bigger has-shuffle secondary-font">Recognition</p>
-                            <h2 class="has-animation">Awards Received</h2>
+                            <p class="bigger has-shuffle secondary-font">Appreciation</p>
+                            <h2 class="has-animation">And awards</h2>
                                                                 
                             <hr>
                             
@@ -256,17 +212,10 @@
             
             
             <!-- Page Navigation --> 
-            <div id="page-nav" class="move-nav-onload">
-                <div class="page-nav-wrap">
-                    <div class="page-nav-caption nav-full-caption content-full-width text-align-center">                                 
-                        <div class="inner">
-                            <a class="next-ajax-link-page" data-type="page-transition" data-centerline="GO TO" href="contact.html">
-                                <div class="next-hero-title caption-timeline" data-infoTextBefore="Go Ahead" data-infoTextAfter="Next Page"><span>contact</span></div>
-                            </a>                                  
-                        </div>               
-                    </div>
-                </div>
-            </div>      
+            <div class="content-row full row_padding_top light-section text-align-center" data-bgcolor="#c1bbf0">           
+                <p class="bigger has-shuffle no-margins secondary-font">Ready to work together?</p>
+                <div id="copy-email" data-hover-message="Copy Mail" data-clicked-message="Copied"><span>info@novusforensics.org</span></div>
+            </div>       
             <!--/Page Navigation -->
             
                     
