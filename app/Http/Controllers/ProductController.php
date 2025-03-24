@@ -58,7 +58,7 @@ class ProductController extends Controller {
 			'stock' => 'required|integer',
 			'product_fetures' => 'nullable|string',
 			'product_details' => 'required|string',
-			'featured_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240|dimensions:max_width=10000,max_height=10000',
+			// 'featured_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240|dimensions:max_width=10000,max_height=10000',
 			'publication_status' => 'required',
 			'is_featured' => 'required',
 			'meta_title' => 'required|max:250',

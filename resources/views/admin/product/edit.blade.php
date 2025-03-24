@@ -166,11 +166,11 @@
 					<div class="col-md-5">
 					<div class="multi-input-container" id="multiInput">
 						@foreach(explode(",",$product->product_fetures) ?? [] as $d)
-						<div class="multi-tag">{{$d}}<span>×</span></div>
+						<div class="multi-tag">{{$d}}<span class="remove-tag">×</span></div>
 						@endforeach
 						<input type="text" id="multiInputField" placeholder="Add features and press tab">
 					</div>
-					<input type="hidden" name="product_fetures" id="product_fetures_hidden">
+					<input type="hidden" name="product_fetures" id="product_fetures_hidden" @if($product->product_fetures) value="{{$product->product_fetures}}" @endif>
 						@if ($errors->has('product_fetures'))
 						<span class="help-block">
 							<strong>{{ $errors->first('product_fetures') }}</strong>
@@ -291,7 +291,7 @@
 				<div class="form-group{{ $errors->has('meta_description') ? ' has-error' : '' }}">
 					<label for="meta_description" class="col-md-2 control-label">Meta Description</label>
 					<div class="col-md-9">
-						<textarea name="meta_description" id="meta_description" class="form-control" rows="3" placeholder="ex: product dscription">{{ $product->meta_description }}</textarea>
+						<textarea name="meta_description" id="meta_description" class="form-control" rows="3" placeholder="ex: product dscription">{!! $product->meta_description !!}</textarea>
 						@if ($errors->has('meta_description'))
 						<span class="help-block">
 							<strong>{{ $errors->first('meta_description') }}</strong>
@@ -370,5 +370,16 @@
 		const tags = [...document.querySelectorAll('#multiInput .multi-tag')].map(tag => tag.childNodes[0].textContent.trim());
         hiddenField.value = tags.join(',');
     }
+
+	document.querySelectorAll('.remove-tag').forEach(tag => {
+		tag.addEventListener('click', function() {
+			tag.parentElement.remove();
+
+			const tags = [...document.querySelectorAll('#multiInput .multi-tag')].map(tag => tag.childNodes[0].textContent.trim());
+			hiddenField.value = tags.join(',');
+		});
+	});
+
+	
 </script>
 @endsection
