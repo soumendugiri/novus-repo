@@ -255,7 +255,7 @@
             
                     
             <!-- Page Navigation --> 
-            <div id="page-nav" class="move-nav-onload">
+            <!-- <div id="page-nav" class="move-nav-onload">
                 <div class="page-nav-wrap">
                     <div class="page-nav-caption nav-full-caption content-full-width text-align-center">                                 
                         <div class="inner">
@@ -265,7 +265,7 @@
                         </div>               
                     </div>
                 </div>
-            </div>      
+            </div>       -->
             <!--/Page Navigation -->
             
                     
