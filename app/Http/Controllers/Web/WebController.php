@@ -35,7 +35,7 @@ class WebController extends Controller {
 	public function companies(){
 
 		$data['companies'] = Company::where('publication_status', 1)->get();
-		return view('web.companies',$data);
+		return view('web.companies2',$data);
 	}
 
 	public function product_desc($pid){

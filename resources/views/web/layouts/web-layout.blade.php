@@ -159,7 +159,46 @@
                 <!-- Content Scroll -->
                 <div id="content-scroll">    
                     @yield('content')
-                
+
+                    @if(request()->routeIs('allProductsRoute'))
+                     
+                    <!-- Footer -->
+                    <footer class="clapat-footer hidden">        	
+                        <div id="footer-container">
+                            
+                            <div class="button-icon-link left cp-button-prev fade-slide-element fadeout-element">                        
+                                <div class="icon-wrap-scale">
+                                    <div class="icon-wrap parallax-wrap">
+                                        <div class="button-icon parallax-element">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-text sticky left"><span data-hover="Prev">Prev</span></div>                        
+                            </div>
+                            
+                            <div class="grid-list-option fade-slide-element fadeout-element">
+                                <div class="grid-option active link">Grid</div>
+                                <div class="list-option link">List</div>
+                                <div class="current-option"></div>
+                            </div>
+                            
+                            <div class="button-icon-link right cp-button-next fade-slide-element fadeout-element">                        
+                                <div class="icon-wrap-scale">
+                                    <div class="icon-wrap parallax-wrap">
+                                        <div class="button-icon parallax-element">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-text sticky right"><span data-hover="Next">Next</span></div>                        
+                            </div>
+                            
+                        </div>
+                    </footer>
+                    <!--/Footer -->
+
+                    @else
                     <!-- Footer -->
                     <footer class="clapat-footer hidden">        	
                         <div id="footer-container">
@@ -190,7 +229,8 @@
                             
                         </div>
                     </footer>
-                    <!--/Footer -->            
+                    <!--/Footer -->  
+                    @endif
                             
                 </div>
                 <!--/Content Scroll -->
