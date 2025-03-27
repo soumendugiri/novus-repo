@@ -59,7 +59,7 @@
                                                     </div>
                                                     <div class="slide-thumb speed-50">
                                                         @if ($product->images->count() > 1)
-                                                        <img src="{{ get_featured_image_thumbnail_url($product->images[0]->image) }}" alt="">
+                                                        <img src="{{ get_featured_image_path($product->images[0]->image) }}" alt="">
                                                         @else
                                                         <img src="{{ get_featured_image_thumbnail_url($product->featured_image) }}" alt="">
                                                         @endif
