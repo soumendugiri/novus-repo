@@ -16,7 +16,7 @@
                         
                         
                         <!-- Row -->
-                        <div class="content-row has-clip-path full dark-section change-header-color disable-header-gradient" data-bgcolor="transparent">
+                        {{-- <div class="content-row has-clip-path full dark-section change-header-color disable-header-gradient" data-bgcolor="transparent">
                         
                             <div class="parallax-image-wrapper">
                             
@@ -45,7 +45,7 @@
                                 
                             </div>
                             
-                        </div> 
+                        </div>  --}}
                         <!--/Row -->
                         
                         
@@ -176,16 +176,10 @@
             
             
             <!-- Page Navigation --> 
-            <div id="page-nav" class="move-nav-onload">
-                <div class="page-nav-wrap">
-                    <div class="page-nav-caption nav-full-caption content-full-width text-align-center">                                 
-                        <div class="inner">
-                            <a class="next-ajax-link-page" data-type="page-transition" data-centerline="GO TO" href="{{ route('web.home') }}">
-                                <div class="next-hero-title caption-timeline" data-infoTextBefore="Go Ahead" data-infoTextAfter="Next Page"><span>contact</span></div>
-                            </a>                                  
-                        </div>               
-                </div>
-            </div>      
+            <div class="content-row full row_padding_top light-section text-align-center" data-bgcolor="#c1bbf0">           
+                <p class="bigger has-shuffle no-margins secondary-font">Ready to work together?</p>
+                <div id="copy-email" data-hover-message="Copy Mail" data-clicked-message="Copied"><span>info@novusforensics.org</span></div>
+            </div>          
             <!--/Page Navigation -->
             
                     

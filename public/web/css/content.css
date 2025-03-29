@@ -776,10 +776,10 @@
 	}
 	
 	.jssocials-share-link i {
-		opacity:0;
+		opacity:1;
 	}
 	
-	.jssocials-share-facebook a:before {
+	/* .jssocials-share-facebook a:before {
 		content:"Fb";
 		position:absolute;
 	}
@@ -792,9 +792,9 @@
 	.jssocials-share-twitter a:before {
 		content:"Tx";
 		position:absolute;
-	}
+	} */
 	
-	.jssocials-share-pinterest a:before {
+	/* .jssocials-share-pinterest a:before {
 		content:"Pn";
 		position:absolute;
 	}
@@ -812,9 +812,9 @@
 	.jssocials-share-viber a:before {
 		content:"Vb";
 		position:absolute;
-	}
+	} */
 	
-	.jssocials-share-email a:before {
+	/* .jssocials-share-email a:before {
 		content:"Em";
 		position:absolute;
 	}
@@ -822,7 +822,7 @@
 	.jssocials-share-vkontakte a:before {
 		content:"Vk";
 		position:absolute;
-	}
+	} */
 	
 /*--------------------------------------------------
 	Hero Gradient

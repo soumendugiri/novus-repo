@@ -12,7 +12,7 @@
                     <div class="inner">
                     
                         <h1 class="hero-title caption-timeline" data-infoTextBefore="Creative" data-infoTextAfter="Agency">
-                            <div><span>NOVUS</span></div>
+                            <div><span>LET'S KNOW NOVUS</span></div>
                         </h1>
                         
                         <div class="hero-subtitle caption-timeline onload-shuffle">
@@ -124,6 +124,23 @@
                         </div> 
                         <!--/Row -->
                         
+                         <!-- Row -->
+                        <div class="content-row has-clip-path row_padding_top row_padding_bottom dark-section change-header-color disable-header-gradient" data-bgcolor="#0c0c0c">
+                            
+                            <div class="pinned-lists-wrapper scale-mode text-align-center" data-duration="3x">
+                                <p class="has-shuffle-onscroll">You need it? We do it</p>                               
+                                <ul class="pinned-lists">
+                                    <li>MOBILE FORENSICS</li>
+                                    <li>CDR ANALYSIS</li>
+                                    <li>DNA EXAMINATION</li>
+                                    <li>CRIME SCENE INVESTIGATION</li>
+                                    <li>CYBER SECURITY</li>
+                                    <li>AND MORE</li>
+                                </ul>
+                            </div>
+                            
+                        </div> 
+                        <!--/Row -->  
                         
                         <!-- Row -->
                         {{-- <div class="content-row has-clip-path row_padding_top row_padding_bottom dark-section change-header-color disable-header-gradient" data-bgcolor="#0c0c0c">
@@ -156,42 +173,42 @@
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">Awwwards</span>
                                     <span class="flex-list-center">Developer Award, Site of the Day, Honorable Mention</span>
-                                    <span class="flex-list-right">x08 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">CSS Design Awards</span>
                                     <span class="flex-list-center">Website of the Day, Special Kudos</span>
-                                    <span class="flex-list-right">x06 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">Behance</span>
                                     <span class="flex-list-center">Featured UX/UI and XD Design</span>
-                                    <span class="flex-list-right">x04 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">CSS Light</span>
                                     <span class="flex-list-center">Featured Website, Featured Design</span>
-                                    <span class="flex-list-right">x12 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">FWA Awards</span>
                                     <span class="flex-list-center">FWA of the day, FWA of the month</span>
-                                    <span class="flex-list-right">x04 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">One Page Love</span>
                                     <span class="flex-list-center">Site of the Day</span>
-                                    <span class="flex-list-right">x10 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">SiteInspire</span>
                                     <span class="flex-list-center">Featured Website</span>
-                                    <span class="flex-list-right">x08 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>
                                 <li class="flex-list link has-animation">
                                     <span class="flex-list-left">CSS Winner</span>
                                     <span class="flex-list-center">Site of the Day, Special Mention</span>
-                                    <span class="flex-list-right">x12 Awards</span>
+                                    <span class="flex-list-right"><img style="max-width: 35%" src="{{ custom_asset('web/images/award.png') }}"/></span>
                                 </li>                        
                             </ul>
                             

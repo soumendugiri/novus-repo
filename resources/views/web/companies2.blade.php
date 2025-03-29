@@ -11,7 +11,7 @@
                 <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center hero-full-caption">
                     <div class="inner">
                     
-                        <h1 class="hero-title caption-timeline generate-spans" data-infoTextBefore="Designs" data-infoTextAfter="Portfolio">
+                        <h1 class="hero-title caption-timeline generate-spans" data-infoTextBefore="digital" data-infoTextAfter="Agency">
                             <div><span>Companies</span></div>
                         </h1>
                         
@@ -106,8 +106,8 @@
                                         </div>                           
                                     </div>
                                     <div class="slide-caption trigger-item-link-secondary">
-                                        <div class="slide-title"><span>{{$cmpny->company_name}}</span></div>
-                                        <div class="slide-date"><span>{{$cmpny->company_desc}}</span></div>
+                                        {{-- <div class="slide-title" style="color: black;"><span>{{$cmpny->company_desc}}</span></div> --}}
+                                        <div class="slide-date"><span>{{$cmpny->company_name}}</span></div>
                                         <!-- <div class="slide-cat"><span>Web Design</span></div>                                           -->
                                     </div>
                                 </div>

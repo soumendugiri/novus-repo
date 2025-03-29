@@ -13,7 +13,7 @@
                     <div class="inner">
                     
                         <h1 class="hero-title caption-timeline" data-infoTextBefore="Creative" data-infoTextAfter="Agency">
-                            <div><span>NOVUS</span></div>
+                            <div><span>Our Collabs</span></div>
                         </h1>
                         
                         <div class="hero-subtitle caption-timeline onload-shuffle">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="hero-footer-right">
-                        <div id="info-text"><span>Our Short Story</span></div>
+                        <div id="info-text"><span>Our Collabs</span></div>
                     </div>
                 </div>                                  
             </div>
@@ -167,25 +167,7 @@
                             </div>                                        
                             
                         </div> 
-                        <!--/Row --> --}}
-                        
-                        
-                        <!-- Row -->
-                        <div class="content-row has-clip-path row_padding_top row_padding_bottom dark-section change-header-color disable-header-gradient" data-bgcolor="#0c0c0c">
-                            
-                            <div class="pinned-lists-wrapper scale-mode text-align-center" data-duration="3x">
-                                <p class="has-shuffle-onscroll">You need it? We do it</p>                               
-                                <ul class="pinned-lists">
-                                    <li>branding</li>
-                                    <li>web design</li>
-                                    <li>motion</li>
-                                    <li>development</li>
-                                    <li>marketing</li>
-                                </ul>
-                            </div>
-                            
-                        </div> 
-                        <!--/Row -->                                    
+                        <!--/Row --> --}}                                  
                         
                         
                         <!-- Row -->
@@ -230,17 +212,10 @@
             
             
             <!-- Page Navigation --> 
-            <div id="page-nav" class="move-nav-onload">
-                <div class="page-nav-wrap">
-                    <div class="page-nav-caption nav-full-caption content-full-width text-align-center">                                 
-                        <div class="inner">
-                            <a class="next-ajax-link-page" data-type="page-transition" data-centerline="GO TO" href="contact.html">
-                                <div class="next-hero-title caption-timeline" data-infoTextBefore="Go Ahead" data-infoTextAfter="Next Page"><span>contact</span></div>
-                            </a>                                  
-                        </div>               
-                    </div>
-                </div>
-            </div>      
+            <div class="content-row full row_padding_top light-section text-align-center" data-bgcolor="#c1bbf0">           
+                <p class="bigger has-shuffle no-margins secondary-font">Ready to work together?</p>
+                <div id="copy-email" data-hover-message="Copy Mail" data-clicked-message="Copied"><span>info@novusforensics.org</span></div>
+            </div>          
             <!--/Page Navigation -->
             
                     
